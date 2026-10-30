@@ -19,10 +19,16 @@ styles.css        brand tokens and layout
 main.js           logo sting, 60° motion studies, scroll effects, form
 thanks.html       form fallback page
 404.html
+sitemap.xml       list of public pages (add new top-level pages here)
+robots.txt
 netlify.toml      headers and caching
 assets/           logos, favicon, social image, work/ for project videos
 pinterest.json    machine-readable brand and content brief
 ```
+
+## Updating files
+
+When `styles.css` or `main.js` change, raise the `?v=` number where they are linked in `index.html`, `thanks.html` and `404.html`, so returning visitors get the new version.
 
 ## Adding work
 

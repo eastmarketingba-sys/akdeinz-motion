@@ -495,7 +495,7 @@
       } catch {
         sendLabel.textContent = "Send";
         status.classList.add("is-err");
-        status.textContent = "Couldn’t send. Please email me directly.";
+        status.textContent = "Couldn’t send. Please email hello@akdeinzmotion.com directly.";
       } finally {
         send.disabled = false;
         setTimeout(() => { if (sendLabel.textContent === "Sent") sendLabel.textContent = "Send"; }, 3000);

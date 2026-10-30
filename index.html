@@ -16,7 +16,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles.css?v=2">
 </head>
 <body class="is-loading">
 
@@ -108,33 +108,34 @@
       </header>
 
       <!--
-        Each tile: replace the title/type, and when you have a clip set
+        Each tile: replace the title, and when you have a clip set
         data-video="/assets/work/01.mp4". Until then the canvas study plays.
+        To show a project type, add <span class="tile__type">Type</span> after the h3.
       -->
       <div class="grid">
         <article class="tile tile--a" data-tile data-video="">
           <div class="tile__media"><canvas class="study" data-study="rise"></canvas></div>
-          <div class="tile__meta"><span class="tile__n">01</span><h3>Project title</h3><span class="tile__type">Brand motion</span></div>
+          <div class="tile__meta"><span class="tile__n">01</span><h3>Project title</h3></div>
         </article>
         <article class="tile tile--b" data-tile data-video="">
           <div class="tile__media"><canvas class="study" data-study="shutter"></canvas></div>
-          <div class="tile__meta"><span class="tile__n">02</span><h3>Project title</h3><span class="tile__type">Title sequence</span></div>
+          <div class="tile__meta"><span class="tile__n">02</span><h3>Project title</h3></div>
         </article>
         <article class="tile tile--c" data-tile data-video="">
           <div class="tile__media"><canvas class="study" data-study="wave"></canvas></div>
-          <div class="tile__meta"><span class="tile__n">03</span><h3>Project title</h3><span class="tile__type">Social campaign</span></div>
+          <div class="tile__meta"><span class="tile__n">03</span><h3>Project title</h3></div>
         </article>
         <article class="tile tile--d" data-tile data-video="">
           <div class="tile__media"><canvas class="study" data-study="fold"></canvas></div>
-          <div class="tile__meta"><span class="tile__n">04</span><h3>Project title</h3><span class="tile__type">Logo animation</span></div>
+          <div class="tile__meta"><span class="tile__n">04</span><h3>Project title</h3></div>
         </article>
         <article class="tile tile--e" data-tile data-video="">
           <div class="tile__media"><canvas class="study" data-study="stack"></canvas></div>
-          <div class="tile__meta"><span class="tile__n">05</span><h3>Project title</h3><span class="tile__type">Product film</span></div>
+          <div class="tile__meta"><span class="tile__n">05</span><h3>Project title</h3></div>
         </article>
         <article class="tile tile--f" data-tile data-video="">
           <div class="tile__media"><canvas class="study" data-study="tunnel"></canvas></div>
-          <div class="tile__meta"><span class="tile__n">06</span><h3>Project title</h3><span class="tile__type">Explainer</span></div>
+          <div class="tile__meta"><span class="tile__n">06</span><h3>Project title</h3></div>
         </article>
       </div>
     </section>
@@ -146,19 +147,16 @@
       <div class="contact__grid">
         <div class="contact__direct">
           <span class="caption">Email</span>
-          <!-- Replace with your address -->
-          <a class="contact__email" data-email href="mailto:hello@akdeinzmotion.com">hello@akdeinzmotion.com</a>
+          <a class="contact__email" href="mailto:hello@akdeinzmotion.com">hello@akdeinzmotion.com</a>
           <button class="copy" type="button" data-copy="hello@akdeinzmotion.com">
             <span data-copy-label>Copy address</span>
           </button>
-
-          <ul class="socials" aria-label="Social">
-            <!-- Replace # with your profile URLs -->
-            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="#" target="_blank" rel="noopener">Vimeo</a></li>
-            <li><a href="#" target="_blank" rel="noopener">Behance</a></li>
-            <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
-          </ul>
+          <!--
+            Social links, once confirmed:
+            <ul class="socials" aria-label="Social">
+              <li><a href="URL" target="_blank" rel="noopener">Instagram</a></li>
+            </ul>
+          -->
         </div>
 
         <form class="form" name="contact" method="POST" action="/thanks.html"
@@ -206,6 +204,6 @@
 
   <div class="cursor" data-cursor aria-hidden="true"><span data-cursor-label></span></div>
 
-  <script src="/main.js" defer></script>
+  <script src="/main.js?v=2" defer></script>
 </body>
 </html>

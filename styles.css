@@ -309,6 +309,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   align-items: start;
 }
 @media (max-width: 900px) { .contact__grid { grid-template-columns: 1fr; } }
+/* until email/socials are added, the form takes the full row */
+.contact__grid:not(:has(.contact__direct)) { grid-template-columns: 1fr; max-width: 880px; }
 
 .contact__direct { display: grid; gap: 14px; justify-items: start; }
 .contact__email {
@@ -336,8 +338,8 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   font-size: 14px; display: inline-flex; gap: 6px; align-items: center;
   transition: color var(--out) var(--ease);
 }
-.socials a::after { content: "↗"; color: var(--mute); transition: transform var(--out) var(--ease), color var(--out) var(--ease); }
-.socials a:hover::after { transform: translate(2px, -2px); color: var(--blue); }
+.socials a::after { content: "↗"; color: var(--mute); transition: color var(--out) var(--ease); }
+.socials a:hover::after { color: var(--blue); } /* colour only: nothing moves on hover */
 
 /* form */
 .form { display: grid; grid-template-columns: 1fr 1fr; gap: 8px var(--col-gap); }
