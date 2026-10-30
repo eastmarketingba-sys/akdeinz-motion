@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Akdeinz Motion</title>
+  <meta name="description" content="Akdeinz Motion — motion design studio. Movement, framed with intent.">
+  <meta name="theme-color" content="#000000">
+  <meta property="og:title" content="Akdeinz Motion">
+  <meta property="og:description" content="Movement, framed with intent.">
+  <meta property="og:image" content="/assets/og.png">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/assets/og.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body class="is-loading">
+
+  <a class="skip" href="#contact">Skip to contact</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" data-nav>
+    <a class="nav__logo" href="#top" aria-label="Akdeinz Motion — home">
+      <img src="/assets/logo-horizontal-white.svg" alt="Akdeinz Motion" width="176" height="25">
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#reel">Reel</a>
+      <a href="#work">Work</a>
+      <a href="#contact" class="nav__cta"><span class="dot" aria-hidden="true"></span>Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" data-hero aria-label="Intro">
+      <canvas class="hero__field" data-field aria-hidden="true"></canvas>
+
+      <h1 class="visually-hidden">Akdeinz Motion — motion design</h1>
+
+      <svg class="mark" data-mark viewBox="107.67 0 557.76 191.32" role="img" aria-label="Akdeinz Motion mark">
+        <defs>
+          <clipPath id="frame"><rect x="107.67" y="0" width="557.76" height="191.32"/></clipPath>
+          <clipPath id="foldA"><polygon points="555.23 0 521.97 161.92 432.81 161.92 465.88 0"/></clipPath>
+          <clipPath id="foldB"><polygon points="428.94 0 395.68 161.92 324.35 161.92 311.36 138.2 339.58 0"/></clipPath>
+        </defs>
+        <g clip-path="url(#frame)">
+          <g class="mark__fold" data-fold>
+            <polygon fill="#E6E6E6" points="555.23 0 521.97 161.92 432.81 161.92 465.88 0"/>
+            <g clip-path="url(#foldA)"><path fill="#CCCCCC" d="M445.85-1.79l92.43,92.43c6.11,6.11,17.31,6.57,23.33,0s6.52-16.81,0-23.33l-92.43-92.43c-6.11-6.11-17.31-6.57-23.33,0s-6.52,16.81,0,23.33z"/></g>
+            <polygon fill="#E6E6E6" points="428.94 0 395.68 161.92 324.35 161.92 311.36 138.2 339.58 0"/>
+            <g clip-path="url(#foldB)"><path fill="#CCCCCC" d="M320.15,4.42l76.09,76.09c7.22,7.22,20.45,7.76,27.58,0,7.15-7.78,7.71-19.87,0-27.58l-76.09-76.09c-7.22-7.22-20.45-7.76-27.58,0-7.15,7.78-7.71,19.87,0,27.58z"/></g>
+          </g>
+          <!-- bands, left → right. data-axis: up = rises to the right, down = falls to the right -->
+          <g class="band" data-band data-axis="up" style="--i:0">
+            <polygon fill="#fff" points="217.87 0 307.11 0 196.91 191.32 107.67 191.32"/>
+            <polygon fill="#fff" points="158.38 132.51 267.07 132.51 300.95 191.32 158.38 191.32"/>
+          </g>
+          <g class="band" data-band data-axis="down" style="--i:1">
+            <polygon fill="#fff" points="313.87 0 224.63 0 334.83 191.32 424.07 191.32"/>
+          </g>
+          <g class="band" data-band data-axis="down" style="--i:2">
+            <polygon fill="#fff" points="522.06 161.92 432.81 161.92 339.56 0 428.8 0"/>
+          </g>
+          <g class="band" data-band data-axis="down" style="--i:3">
+            <polygon fill="#fff" points="555.23 0 465.99 0 576.19 191.32 665.43 191.32"/>
+          </g>
+        </g>
+      </svg>
+
+      <p class="hero__line" data-reveal>Movement, framed with intent.</p>
+
+      <div class="hero__foot">
+        <span class="caption" data-reveal>Motion design studio</span>
+        <span class="caption hero__scroll" data-reveal aria-hidden="true"><i></i>Scroll</span>
+      </div>
+
+      <div class="hero__band" aria-hidden="true"></div>
+    </section>
+
+    <!-- ============ REEL ============ -->
+    <section class="reel" id="reel" data-reel aria-label="Showreel">
+      <div class="reel__sticky">
+        <div class="reel__window" data-reel-window>
+          <canvas class="study" data-study="field" aria-hidden="true"></canvas>
+          <!-- Drop your showreel at /assets/reel.mp4 and set data-src="/assets/reel.mp4" (poster optional). -->
+          <video class="reel__video" data-reel-video data-src="" muted loop playsinline preload="none"></video>
+          <button class="reel__sound" data-reel-sound type="button" hidden>
+            <span data-sound-label>Sound on</span>
+          </button>
+        </div>
+        <div class="reel__meta">
+          <span class="caption">Showreel</span>
+          <span class="caption reel__year">2026</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WORK ============ -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <header class="section-head">
+        <h2 id="work-title" class="caption">Selected work</h2>
+        <span class="caption section-head__count">(06)</span>
+      </header>
+
+      <!--
+        Each tile: replace the title/type, and when you have a clip set
+        data-video="/assets/work/01.mp4". Until then the canvas study plays.
+      -->
+      <div class="grid">
+        <article class="tile tile--a" data-tile data-video="">
+          <div class="tile__media"><canvas class="study" data-study="rise"></canvas></div>
+          <div class="tile__meta"><span class="tile__n">01</span><h3>Project title</h3><span class="tile__type">Brand motion</span></div>
+        </article>
+        <article class="tile tile--b" data-tile data-video="">
+          <div class="tile__media"><canvas class="study" data-study="shutter"></canvas></div>
+          <div class="tile__meta"><span class="tile__n">02</span><h3>Project title</h3><span class="tile__type">Title sequence</span></div>
+        </article>
+        <article class="tile tile--c" data-tile data-video="">
+          <div class="tile__media"><canvas class="study" data-study="wave"></canvas></div>
+          <div class="tile__meta"><span class="tile__n">03</span><h3>Project title</h3><span class="tile__type">Social campaign</span></div>
+        </article>
+        <article class="tile tile--d" data-tile data-video="">
+          <div class="tile__media"><canvas class="study" data-study="fold"></canvas></div>
+          <div class="tile__meta"><span class="tile__n">04</span><h3>Project title</h3><span class="tile__type">Logo animation</span></div>
+        </article>
+        <article class="tile tile--e" data-tile data-video="">
+          <div class="tile__media"><canvas class="study" data-study="stack"></canvas></div>
+          <div class="tile__meta"><span class="tile__n">05</span><h3>Project title</h3><span class="tile__type">Product film</span></div>
+        </article>
+        <article class="tile tile--f" data-tile data-video="">
+          <div class="tile__media"><canvas class="study" data-study="tunnel"></canvas></div>
+          <div class="tile__meta"><span class="tile__n">06</span><h3>Project title</h3><span class="tile__type">Explainer</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="contact__title" data-split>Let’s make it move.</h2>
+
+      <div class="contact__grid">
+        <div class="contact__direct">
+          <span class="caption">Email</span>
+          <!-- Replace with your address -->
+          <a class="contact__email" data-email href="mailto:hello@akdeinzmotion.com">hello@akdeinzmotion.com</a>
+          <button class="copy" type="button" data-copy="hello@akdeinzmotion.com">
+            <span data-copy-label>Copy address</span>
+          </button>
+
+          <ul class="socials" aria-label="Social">
+            <!-- Replace # with your profile URLs -->
+            <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Vimeo</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Behance</a></li>
+            <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+          </ul>
+        </div>
+
+        <form class="form" name="contact" method="POST" action="/thanks.html"
+              data-netlify="true" netlify-honeypot="bot-field" data-form>
+          <input type="hidden" name="form-name" value="contact">
+          <p class="visually-hidden"><label>Leave empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+          <div class="field">
+            <input id="f-name" name="name" type="text" autocomplete="name" required placeholder=" ">
+            <label for="f-name">Name</label>
+          </div>
+          <div class="field">
+            <input id="f-email" name="email" type="email" autocomplete="email" required placeholder=" ">
+            <label for="f-email">Email</label>
+          </div>
+          <div class="field field--full">
+            <textarea id="f-msg" name="message" rows="3" required placeholder=" "></textarea>
+            <label for="f-msg">Project, timeline, budget</label>
+          </div>
+
+          <div class="form__foot">
+            <button class="send" type="submit" data-send>
+              <span class="send__label" data-send-label>Send</span>
+              <span class="send__band" aria-hidden="true"></span>
+            </button>
+            <p class="form__status" data-status role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <img class="footer__mark" src="/assets/mark-white.svg" alt="" width="58" height="20">
+    <span class="caption">An East Marketing brand</span>
+    <span class="caption">© <span data-year>2026</span></span>
+    <a class="caption footer__top" href="#top">Back to top</a>
+  </footer>
+
+  <!-- video lightbox -->
+  <div class="lightbox" data-lightbox hidden>
+    <button class="lightbox__close" type="button" data-lightbox-close aria-label="Close">Close</button>
+    <video data-lightbox-video controls playsinline></video>
+  </div>
+
+  <div class="cursor" data-cursor aria-hidden="true"><span data-cursor-label></span></div>
+
+  <script src="/main.js" defer></script>
+</body>
+</html>

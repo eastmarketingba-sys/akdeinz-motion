@@ -1,0 +1,66 @@
+{
+  "_readme": "Source of truth for automated Pinterest pin creation. Read this file first. Only state facts that appear here; do not invent clients, projects, awards or numbers.",
+  "brand": {
+    "name": "Akdeinz Motion",
+    "type": "Motion design studio",
+    "parent": "An East Marketing brand",
+    "tagline": "Movement, framed with intent.",
+    "story": "The mark joins an A and an M into one continuous form, built from parallel bands cut at 60°. Where the bands overlap, a soft fold catches the light, like film or ribbon pulled through a frame. Akdeniz is the Mediterranean: sharp coastlines, waves, sun on water, kept abstract and geometric.",
+    "services": ["Brand motion", "Logo animation", "Title sequences", "Social campaigns", "Product films", "Explainers"]
+  },
+  "links": {
+    "website": "https://akdeinzmotion.com",
+    "pin_destination": "https://akdeinzmotion.com/?utm_source=pinterest&utm_medium=social",
+    "contact": "https://akdeinzmotion.com/#contact",
+    "work": "https://akdeinzmotion.com/#work",
+    "showreel": "https://akdeinzmotion.com/#reel"
+  },
+  "visual_rules": {
+    "background": "#000000 (primary). White #FFFFFF or Fold Grey #E6E6E6 for inverted pins.",
+    "palette": {
+      "black": "#000000",
+      "white": "#FFFFFF",
+      "akdeniz_blue": "#2E6BFF",
+      "aegean": "#0B35C9",
+      "fold_grey": "#E6E6E6",
+      "carbon": "#191919"
+    },
+    "accent_rule": "Blue appears in small, deliberate doses. Never a full blue background behind body content.",
+    "geometry": "Flat bands with horizontal ends and 60° sides. Everything rises on the 60° axis. No gradients on the logo, no ornament.",
+    "typography": {
+      "display": "Inter Display Bold / ExtraBold, tight tracking (-2% to -4%)",
+      "body": "Inter Medium",
+      "caption": "Inter Regular, uppercase, +12% tracking"
+    },
+    "logo_rules": [
+      "Use the supplied files only; white logo on black is primary.",
+      "Do not stretch, rotate, recolour the folds, outline, or add effects (glow, shadow).",
+      "Clear space around the logo equals the width of one band.",
+      "Minimum logo width on a pin: 120 px."
+    ],
+    "pin_format": "1000 x 1500 px (2:3). Keep text in the centre 80%; Pinterest crops edges in some feeds."
+  },
+  "assets": {
+    "base_url": "https://raw.githubusercontent.com/eastmarketingba-sys/akdeinz-motion/main/",
+    "logo_horizontal_white_svg": "assets/logo-horizontal-white.svg",
+    "mark_white_svg": "assets/mark-white.svg",
+    "profile_black_png_1080": "assets/og.png",
+    "project_videos_folder": "assets/work/",
+    "note": "Project videos are not uploaded yet. Until they are, build pins from brand graphics (bands, mark, palette) rather than claiming specific client work."
+  },
+  "voice": {
+    "tone": "Confident, minimal, precise. Few words. No hype words like 'innovative', 'seamless', 'next-generation'.",
+    "pin_title_max_chars": 100,
+    "pin_description_max_chars": 500,
+    "example_titles": [
+      "Movement, framed with intent",
+      "Motion design that holds its frame",
+      "Logo animation built on one angle: 60°"
+    ],
+    "keywords": ["motion design", "motion graphics", "logo animation", "brand motion", "animated logo", "kinetic design", "title sequence", "minimal design", "geometric design", "graphic design inspiration"]
+  },
+  "status": {
+    "projects_are_placeholders": true,
+    "contact_email_confirmed": false
+  }
+}
