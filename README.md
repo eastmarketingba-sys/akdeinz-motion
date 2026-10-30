@@ -24,11 +24,17 @@ robots.txt
 netlify.toml      headers and caching
 assets/           logos, favicon, social image, work/ for project videos
 pinterest.json    machine-readable brand and content brief
+media/            animated Pinterest GIFs + pins.json (not loaded by any page)
+tools/            make_pins.py — builds the GIFs in media/
 ```
 
 ## Updating files
 
 When `styles.css` or `main.js` change, raise the `?v=` number where they are linked in `index.html`, `thanks.html` and `404.html`, so returning visitors get the new version.
+
+## Pinterest GIFs
+
+Built by `python tools/make_pins.py` (needs Pillow, numpy and the Inter font). Never edit the GIFs by hand. When a GIF changes, raise `VERSION` in the script so the file name changes.
 
 ## Adding work
 

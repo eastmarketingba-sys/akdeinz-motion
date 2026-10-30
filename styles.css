@@ -104,16 +104,16 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   position: relative;
   min-height: 100vh; min-height: 100svh;
   display: grid;
-  grid-template-rows: 1fr auto auto;
+  grid-template-rows: 1fr auto 1fr; /* equal rows keep the mark dead centre */
   place-items: center;
-  padding: 96px var(--gutter) calc(clamp(28px, 4.4vw, 64px) + 20px);
+  padding: calc(clamp(28px, 4.4vw, 64px) + 20px) var(--gutter);
   overflow: hidden;
   isolation: isolate;
 }
 .hero__field { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -1; }
 
 .mark {
-  align-self: end;
+  grid-row: 2;
   width: min(78vw, 980px, 118vh);
   height: auto;
   overflow: visible;
@@ -128,10 +128,12 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .is-loading .band[data-axis="up"]   { transform: translate(-130px, 225px); }
 .is-loading .band[data-axis="down"] { transform: translate(-130px, -225px); }
 .is-live .band { transition: none; } /* after the sting, scroll drives the bands */
-.mark__fold { transition: opacity 400ms var(--ease) 820ms; }
+.mark__fold { transition: opacity 400ms var(--ease) 480ms; }
 .is-loading .mark__fold { opacity: 0; }
+.is-live .mark__fold { transition: none; } /* no delay once scroll drives it */
 
 .hero__line {
+  grid-row: 3;
   margin: clamp(28px, 5vw, 56px) 0 0;
   align-self: start;
   font-size: clamp(18px, 2.2vw, 30px);
@@ -140,10 +142,12 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   font-variation-settings: "opsz" 32;
 }
 .hero__foot {
+  grid-row: 3;
+  align-self: end;
   width: 100%;
   display: flex; justify-content: space-between; align-items: end;
-  padding-top: 40px;
 }
+@media (max-height: 520px) { .hero__foot { display: none; } }
 .hero__scroll { display: inline-flex; align-items: center; gap: 10px; }
 .hero__scroll i {
   width: 14px; height: 24px; position: relative; overflow: hidden;
@@ -177,9 +181,10 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .is-loading [data-reveal] { opacity: 0; transform: translateY(10px); }
 
 /* ---------- REEL ---------- */
-.reel { position: relative; height: 260vh; }
+/* one screen tall, no pinning: the frame opens as it scrolls in */
+.reel { position: relative; height: 100vh; height: 100svh; }
 .reel__sticky {
-  position: sticky; top: 0; height: 100vh; height: 100svh;
+  position: relative; height: 100%;
   display: grid; place-items: center; overflow: hidden;
 }
 .reel__window {
@@ -295,14 +300,23 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   font-variation-settings: "opsz" 32;
   max-width: 12ch;
 }
-.contact__title .w { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.06em; }
-.contact__title .w > span {
+.contact__title .w { display: inline-block; white-space: nowrap; }
+.contact__title .ch {
   display: inline-block;
-  transition: transform 800ms var(--ease);
-  transition-delay: calc(var(--d) * 80ms);
+  animation: wiggle 2.4s var(--ease) infinite alternate;
+  animation-delay: calc(var(--n) * -0.14s);
+  will-change: transform;
 }
-.js .contact__title:not(.is-in) .w > span { transform: translate(-0.3em, 1.1em); }
-.contact__title .w:last-child > span { color: var(--blue); }
+.contact__title .w:last-child .ch { color: var(--blue); animation-name: wiggle-strong; }
+/* drift along the brand's 60° axis: dx = 0.5k, dy = -0.866k */
+@keyframes wiggle {
+  from { transform: translate(-0.012em, 0.021em); }
+  to   { transform: translate(0.012em, -0.021em); }
+}
+@keyframes wiggle-strong {
+  from { transform: translate(-0.022em, 0.038em); }
+  to   { transform: translate(0.022em, -0.038em); }
+}
 
 .contact__grid {
   display: grid; grid-template-columns: 5fr 7fr; gap: clamp(48px, 6vw, 120px);
@@ -446,5 +460,5 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 /* ---------- REDUCED MOTION ---------- */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition-duration: 1ms !important; transition-delay: 0ms !important; }
-  .js .tile:not(.is-in), .js .contact__title:not(.is-in) .w > span { opacity: 1; transform: none; }
+  .js .tile:not(.is-in) { opacity: 1; transform: none; }
 }

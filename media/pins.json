@@ -1,0 +1,94 @@
+{
+  "_readme": "Animated pins for the Pinterest automation. Files are hosted on the site but not loaded by any page.",
+  "link": "https://akdeinzmotion.com/?utm_source=pinterest&utm_medium=social",
+  "pins": [
+    {
+      "id": "sting",
+      "image_url": "https://akdeinzmotion.com/media/akdeinz-motion-sting-v1.gif",
+      "width": 600,
+      "height": 900,
+      "format": "gif",
+      "bytes": 112323,
+      "title": "Akdeinz Motion — Movement, framed with intent",
+      "description": "The Akdeinz Motion mark: an A and an M joined into one form, built from bands cut at 60°. Motion design studio, an East Marketing brand.",
+      "alt": "White Akdeinz Motion logo animating in on a black background, with the tagline Movement, framed with intent, and a blue band."
+    },
+    {
+      "id": "field",
+      "image_url": "https://akdeinzmotion.com/media/akdeinz-motion-field-v1.gif",
+      "width": 600,
+      "height": 900,
+      "format": "gif",
+      "bytes": 541456,
+      "title": "Movement, framed with intent — Akdeinz Motion",
+      "description": "Bands rising on a single 60° axis, the motion system behind the Akdeinz Motion identity.",
+      "alt": "White, grey and blue parallelogram bands rising diagonally across a black background above the words Movement, framed with intent."
+    },
+    {
+      "id": "waves",
+      "image_url": "https://akdeinzmotion.com/media/akdeinz-motion-waves-v1.gif",
+      "width": 600,
+      "height": 900,
+      "format": "gif",
+      "bytes": 367653,
+      "title": "Sharp coastlines, waves, sun on water — Akdeinz Motion",
+      "description": "Akdeniz is the Mediterranean, kept abstract and geometric. A study in 60° bands by Akdeinz Motion.",
+      "alt": "Rows of white and blue slanted bands rising and falling like waves on a black background."
+    },
+    {
+      "id": "axis",
+      "image_url": "https://akdeinzmotion.com/media/akdeinz-motion-axis-v1.gif",
+      "width": 600,
+      "height": 900,
+      "format": "gif",
+      "bytes": 965867,
+      "title": "Move on the 60° axis — Akdeinz Motion",
+      "description": "Bands enter and exit along their own diagonal. A motion principle of the Akdeinz Motion identity.",
+      "alt": "White and blue slanted bands widening and narrowing in a wave on a black background, above the words Move on the 60° axis."
+    },
+    {
+      "id": "fold",
+      "image_url": "https://akdeinzmotion.com/media/akdeinz-motion-fold-v1.gif",
+      "width": 600,
+      "height": 900,
+      "format": "gif",
+      "bytes": 769932,
+      "title": "Reveal with the fold — Akdeinz Motion",
+      "description": "Where the bands overlap, a soft fold catches the light, like film or ribbon pulled through a frame.",
+      "alt": "White bands sliding across a dark frame and turning light grey where they fold at an edge, above the words Reveal with the fold."
+    },
+    {
+      "id": "easing",
+      "image_url": "https://akdeinzmotion.com/media/akdeinz-motion-easing-v1.gif",
+      "width": 600,
+      "height": 900,
+      "format": "gif",
+      "bytes": 71319,
+      "title": "One easing — Akdeinz Motion",
+      "description": "Every Akdeinz Motion animation uses one curve: cubic-bezier(0.2, 0.8, 0.2, 1).",
+      "alt": "Six slanted bands sliding in one after another, holding, then sliding out, above the words One easing."
+    },
+    {
+      "id": "climb",
+      "image_url": "https://akdeinzmotion.com/media/akdeinz-motion-climb-v1.gif",
+      "width": 600,
+      "height": 900,
+      "format": "gif",
+      "bytes": 71038,
+      "title": "Rises on 60° and climbs — Akdeinz Motion",
+      "description": "A sister brand to East Marketing, same family, different direction: Akdeinz Motion rises on 60° and climbs.",
+      "alt": "Slanted white bars stacking upward like a staircase, the top one blue, above the words Rises on 60° and climbs."
+    },
+    {
+      "id": "geometry",
+      "image_url": "https://akdeinzmotion.com/media/akdeinz-motion-geometry-v1.gif",
+      "width": 600,
+      "height": 900,
+      "format": "gif",
+      "bytes": 783203,
+      "title": "Flat geometry. Angled cuts. No ornament. — Akdeinz Motion",
+      "description": "The Akdeinz Motion identity: flat geometry, angled cuts, no gradients, no ornament.",
+      "alt": "Nested black and white slanted shapes moving into the frame like a tunnel, above the words Flat geometry, angled cuts, no ornament."
+    }
+  ]
+}

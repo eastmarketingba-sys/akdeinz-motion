@@ -44,7 +44,11 @@
     "mark_white_svg": "assets/mark-white.svg",
     "profile_black_png_1080": "assets/og.png",
     "project_videos_folder": "assets/work/",
-    "note": "Project videos are not uploaded yet. Until they are, build pins from brand graphics (bands, mark, palette) rather than claiming specific client work."
+    "note": "Project videos are not uploaded yet. Until they are, build pins from brand graphics (bands, mark, palette) rather than claiming specific client work.",
+    "animated_pins": {
+      "manifest": "https://akdeinzmotion.com/media/pins.json",
+      "note": "Ready-made 600x900 GIFs with title, description and alt text. Use image_url as the pin media source and the manifest 'link' as the pin link."
+    }
   },
   "voice": {
     "tone": "Confident, minimal, precise. Few words. No hype words like 'innovative', 'seamless', 'next-generation'.",

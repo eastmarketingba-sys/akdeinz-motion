@@ -12,6 +12,8 @@
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const clamp = (v, a = 0, b = 1) => Math.min(b, Math.max(a, v));
   const lerp = (a, b, t) => a + (b - a) * t;
+  // scroll-linked curve: slow start, fast through the middle, slow finish
+  const glide = (x) => x * x * x * (x * (6 * x - 15) + 10);
 
   const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
   const finePointer = matchMedia("(pointer: fine)").matches;
@@ -121,7 +123,7 @@
      Each is a short piece built only from the brand band. */
 
   // Drifting field of bands rising on the 60° axis. Used for hero + reel.
-  function makeField(palette, density = 1) {
+  function makeField(palette, density = 1, pace = 1) {
     return {
       init(W, H) {
         const n = Math.round((W * H) / (90000 * DPR * DPR) * density) + 10;
@@ -132,7 +134,7 @@
           // enter from the bottom/left edge so every band rises across the frame
           const x = Math.random() * (W + H / TAN60) - H / TAN60;
           const y = initial ? Math.random() * (H + h) : H + h + Math.random() * H * 0.3;
-          return { x, y, w, h, depth, color, speed: (14 + depth * 46) * DPR };
+          return { x, y, w, h, depth, color, speed: (14 + depth * 46) * DPR * pace };
         };
         const items = Array.from({ length: n }, (_, i) => spawn(i / n, true));
         return { items, spawn, px: 0, py: 0 };
@@ -172,7 +174,7 @@
       ctx.translate((W - MW * s) / 2, (H - MH * s) / 2);
       ctx.scale(s, s);
       ctx.beginPath(); ctx.rect(0, 0, MW, MH); ctx.clip();
-      const foldIn = ease(clamp((tt - 0.82) / 0.4)) * (1 - ease(clamp((tt - 3.2) / 0.25)));
+      const foldIn = ease(clamp((tt - 0.28) / 0.35)) * (1 - ease(clamp((tt - 3.3) / 0.28)));
       ctx.globalAlpha = foldIn;
       ctx.fillStyle = COLORS.fold;
       for (const f of MARK.folds) { poly(ctx, f); ctx.fill(); }
@@ -327,7 +329,7 @@
   const reelSound = $("[data-reel-sound]");
   const reelCanvas = reelWin && $("canvas", reelWin);
   if (reelCanvas) {
-    const f = makeField([COLORS.white, COLORS.white, COLORS.fold, "#2a2a2a", "#2a2a2a", "#111", "#111", "#111", COLORS.blue], 1.4);
+    const f = makeField([COLORS.white, COLORS.white, COLORS.white, COLORS.fold, COLORS.fold, "#3a3a3a", "#3a3a3a", "#2a2a2a", "#2a2a2a", "#2a2a2a", COLORS.blue], 2.4, 2.6);
     addScene(reelCanvas, f.draw, f.init);
   }
   if (reelVideo && reelVideo.dataset.src) {
@@ -347,51 +349,58 @@
     });
   }
 
-  /* ---------------- scroll-driven ---------------- */
+  /* ---------------- scroll-driven ----------------
+     Effects follow a smoothed copy of the scroll position (sy) so a mouse
+     wheel's steps become one continuous glide instead of jumps. */
+  let sy = scrollY;
+  let applied = -1;
+
   function updateScroll() {
-    const vh = innerHeight, vw = innerWidth, y = scrollY;
+    const vh = innerHeight, vw = innerWidth, y = sy;
 
     // Hero: bands leave along their own axis, in the same left → right order.
     if (mark && mark.classList.contains("is-live")) {
-      const p = clamp(y / (vh * 0.75));
+      const p = clamp(y / (vh * 0.85));
       bands.forEach((b, i) => {
-        const pi = reduced ? 0 : ease(clamp((p - i * 0.07) / 0.72));
+        const pi = reduced ? 0 : glide(clamp((p - i * 0.06) / 0.82));
         const up = b.dataset.axis === "up";
         const d = pi * 420;
-        b.style.transform = `translate(${d * AX}px, ${(up ? -1 : 1) * d * AY}px)`;
+        b.style.transform = `translate(${(d * AX).toFixed(2)}px, ${((up ? -1 : 1) * d * AY).toFixed(2)}px)`;
       });
       const fold = $("[data-fold]");
-      if (fold) fold.style.opacity = String(1 - clamp(p * 2.2));
+      if (fold) fold.style.opacity = String(1 - glide(clamp((p - 0.04) / 0.6)));
       for (const el of heroText) {
         el.style.opacity = String(1 - clamp(p * 1.6));
-        el.style.transform = `translate(${p * 40 * AX}px, ${-p * 40 * AY}px)`;
+        el.style.transform = `translate(${(p * 40 * AX).toFixed(2)}px, ${(-p * 40 * AY).toFixed(2)}px)`;
       }
     }
 
-    // Reel: a single 60° band opens into the full frame.
+    // Reel: a single 60° band opens into the full frame across the whole climb:
+    // slow at the bottom of the screen, fast mid-screen, settling at the top.
     if (reel && reelWin) {
-      const top = reel.offsetTop;
-      const lin = clamp((y - top + vh * 0.5) / (vh * 1.3));
-      const p = reduced ? 1 : lin * lin * (3 - 2 * lin); // scrubbed by scroll, so a symmetric curve
-      const w0 = vw * 0.16, k = vh / TAN60;
+      const rel = reel.offsetTop - y;                 // section top, in viewport px
+      const p = reduced ? 1 : glide(clamp((vh - rel) / (vh * 0.96)));
+      const rh = reelWin.offsetHeight;
+      const w0 = vw * 0.16, k = rh / TAN60;
       const cx = vw / 2;
       const s = [
         [cx - w0 / 2 + k / 2, 0], [cx + w0 / 2 + k / 2, 0],
-        [cx + w0 / 2 - k / 2, vh], [cx - w0 / 2 - k / 2, vh],
+        [cx + w0 / 2 - k / 2, rh], [cx - w0 / 2 - k / 2, rh],
       ];
-      const e = [[0, 0], [vw, 0], [vw, vh], [0, vh]];
+      const e = [[0, 0], [vw, 0], [vw, rh], [0, rh]];
       const pts = s.map((pt, i) => `${lerp(pt[0], e[i][0], p).toFixed(1)}px ${lerp(pt[1], e[i][1], p).toFixed(1)}px`);
       reelWin.style.clipPath = `polygon(${pts.join(",")})`;
     }
+    applied = y;
   }
-  addEventListener("scroll", updateScroll, { passive: true });
-  addEventListener("resize", updateScroll);
+  addEventListener("resize", () => { applied = -1; updateScroll(); });
   updateScroll();
 
   /* ---------------- work tiles ---------------- */
+  const tileScenes = new Map();
   for (const c of $$("canvas[data-study]")) {
     const name = c.dataset.study;
-    if (studies[name]) addScene(c, studies[name]);
+    if (studies[name]) tileScenes.set(c, addScene(c, studies[name]));
   }
 
   const lightbox = $("[data-lightbox]");
@@ -415,7 +424,14 @@
   addEventListener("keydown", (e) => { if (e.key === "Escape" && !lightbox.hidden) closeLightbox(); });
 
   const tileIO = new IntersectionObserver((entries) => {
-    for (const e of entries) if (e.isIntersecting) { e.target.classList.add("is-in"); tileIO.unobserve(e.target); }
+    for (const e of entries) {
+      if (!e.isIntersecting) continue;
+      e.target.classList.add("is-in");
+      tileIO.unobserve(e.target);
+      // start the study from its first frame as the tile arrives
+      const scene = tileScenes.get($("canvas", e.target));
+      if (scene) scene.t0 = performance.now();
+    }
   }, { threshold: 0.15 });
 
   for (const tile of $$("[data-tile]")) {
@@ -439,17 +455,17 @@
     tile.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(src); } });
   }
 
-  /* ---------------- contact headline ---------------- */
+  /* ---------------- contact headline ----------------
+     Each letter drifts back and forth on the 60° axis, all the time,
+     offset in time so a slow wave runs through the line. */
   const title = $("[data-split]");
   if (title) {
-    const words = title.textContent.trim().split(/\s+/);
-    title.setAttribute("aria-label", title.textContent.trim());
-    title.innerHTML = words
-      .map((w, i) => `<span class="w" aria-hidden="true"><span style="--d:${i}">${w}</span></span>`)
+    const text = title.textContent.trim();
+    title.setAttribute("aria-label", text);
+    let n = 0;
+    title.innerHTML = text.split(/\s+/)
+      .map((w) => `<span class="w" aria-hidden="true">${[...w].map((ch) => `<span class="ch" style="--n:${n++}">${ch}</span>`).join("")}</span>`)
       .join(" ");
-    new IntersectionObserver(([e], obs) => {
-      if (e.isIntersecting) { title.classList.add("is-in"); obs.disconnect(); }
-    }, { threshold: 0.4 }).observe(title);
   }
 
   /* ---------------- copy email ---------------- */
@@ -528,6 +544,11 @@
     const y = scrollY;
     scrollVel = lerp(scrollVel, (y - lastY) / Math.max(dt, 0.001) / 60, 0.1);
     lastY = y;
+
+    // glide toward the real scroll position (frame-rate independent)
+    sy = reduced ? y : lerp(sy, y, 1 - Math.exp(-dt * 7));
+    if (Math.abs(sy - y) < 0.1) sy = y;
+    if (sy !== applied) updateScroll();
 
     if (!reduced) {
       for (const s of scenes) {
