@@ -545,7 +545,7 @@ def main():
         "climb": gif_climb(), "geometry": gif_geometry(),
     }
     manifest = {
-        "_readme": "Animated pins for the Pinterest automation. Files are hosted on the site but not loaded by any page.",
+        "_readme": "Animated pins for the Pinterest automation. Files are hosted on the site and also shown on /reels/.",
         "link": f"{SITE}/?utm_source=pinterest&utm_medium=social",
         "pins": [],
     }

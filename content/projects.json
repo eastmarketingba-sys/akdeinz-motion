@@ -1,0 +1,140 @@
+{
+  "_readme": "Source for the Work and Reels pages. After any change run: python tools/build_pages.py. Only write what is real: a field left out simply doesn't show. A page goes into Google once it has both what and why. Fields are listed in README.md.",
+  "showreel": "",
+  "projects": [
+    {
+      "slug": "rise-study",
+      "kind": "work",
+      "title": "Rise study",
+      "type": "Motion study",
+      "year": "2026",
+      "summary": "The logo sting. Bands slide in on their own axis, the fold fades up, then everything exits.",
+      "study": "rise"
+    },
+    {
+      "slug": "shutter-study",
+      "kind": "work",
+      "title": "Shutter study",
+      "type": "Motion study",
+      "year": "2026",
+      "summary": "Thin 60° slats breathing in width, like a shutter.",
+      "study": "shutter"
+    },
+    {
+      "slug": "wave-study",
+      "kind": "work",
+      "title": "Wave study",
+      "type": "Motion study",
+      "year": "2026",
+      "summary": "Rows of bands whose height follows a Mediterranean swell.",
+      "study": "wave"
+    },
+    {
+      "slug": "fold-study",
+      "kind": "work",
+      "title": "Fold study",
+      "type": "Motion study",
+      "year": "2026",
+      "summary": "A ribbon pulled through a frame. Past the edge it bends into the fold.",
+      "study": "fold"
+    },
+    {
+      "slug": "stack-study",
+      "kind": "work",
+      "title": "Stack study",
+      "type": "Motion study",
+      "year": "2026",
+      "summary": "Bars stack upward, then clear. The mark climbs.",
+      "study": "stack"
+    },
+    {
+      "slug": "tunnel-study",
+      "kind": "work",
+      "title": "Tunnel study",
+      "type": "Motion study",
+      "year": "2026",
+      "summary": "Nested bands receding into the frame.",
+      "study": "tunnel"
+    },
+    {
+      "slug": "logo-sting",
+      "kind": "reel",
+      "title": "Logo sting",
+      "type": "Reel",
+      "year": "2026",
+      "summary": "The Akdeinz Motion mark: an A and an M joined into one form, built from bands cut at 60°.",
+      "image": "/media/akdeinz-motion-sting-v1.gif",
+      "alt": "White Akdeinz Motion logo animating in on a black background, with the tagline Movement, framed with intent, and a blue band."
+    },
+    {
+      "slug": "field",
+      "kind": "reel",
+      "title": "Movement, framed with intent",
+      "type": "Reel",
+      "year": "2026",
+      "summary": "Bands rising on a single 60° axis, the motion system behind the Akdeinz Motion identity.",
+      "image": "/media/akdeinz-motion-field-v1.gif",
+      "alt": "White, grey and blue parallelogram bands rising diagonally across a black background above the words Movement, framed with intent."
+    },
+    {
+      "slug": "waves",
+      "kind": "reel",
+      "title": "Sharp coastlines, waves, sun on water",
+      "type": "Reel",
+      "year": "2026",
+      "summary": "Akdeniz is the Mediterranean, kept abstract and geometric. A study in 60° bands.",
+      "image": "/media/akdeinz-motion-waves-v1.gif",
+      "alt": "Rows of white and blue slanted bands rising and falling like waves on a black background."
+    },
+    {
+      "slug": "axis",
+      "kind": "reel",
+      "title": "Move on the 60° axis",
+      "type": "Reel",
+      "year": "2026",
+      "summary": "Bands enter and exit along their own diagonal. A motion principle of the identity.",
+      "image": "/media/akdeinz-motion-axis-v1.gif",
+      "alt": "White and blue slanted bands widening and narrowing in a wave on a black background, above the words Move on the 60° axis."
+    },
+    {
+      "slug": "fold",
+      "kind": "reel",
+      "title": "Reveal with the fold",
+      "type": "Reel",
+      "year": "2026",
+      "summary": "Where the bands overlap, a soft fold catches the light, like film or ribbon pulled through a frame.",
+      "image": "/media/akdeinz-motion-fold-v1.gif",
+      "alt": "White bands sliding across a dark frame and turning light grey where they fold at an edge, above the words Reveal with the fold."
+    },
+    {
+      "slug": "easing",
+      "kind": "reel",
+      "title": "One easing",
+      "type": "Reel",
+      "year": "2026",
+      "summary": "Every Akdeinz Motion animation uses one curve: cubic-bezier(0.2, 0.8, 0.2, 1).",
+      "image": "/media/akdeinz-motion-easing-v1.gif",
+      "alt": "Six slanted bands sliding in one after another, holding, then sliding out, above the words One easing."
+    },
+    {
+      "slug": "climb",
+      "kind": "reel",
+      "title": "Rises on 60° and climbs",
+      "type": "Reel",
+      "year": "2026",
+      "summary": "A sister brand to East Marketing, same family, different direction: Akdeinz Motion rises on 60° and climbs.",
+      "image": "/media/akdeinz-motion-climb-v1.gif",
+      "alt": "Slanted white bars stacking upward like a staircase, the top one blue, above the words Rises on 60° and climbs."
+    },
+    {
+      "slug": "geometry",
+      "kind": "reel",
+      "title": "Flat geometry. Angled cuts. No ornament.",
+      "type": "Reel",
+      "year": "2026",
+      "summary": "The Akdeinz Motion identity: flat geometry, angled cuts, no gradients, no ornament.",
+      "image": "/media/akdeinz-motion-geometry-v1.gif",
+      "alt": "Nested black and white slanted shapes moving into the frame like a tunnel, above the words Flat geometry, angled cuts, no ornament."
+    }
+  ]
+}

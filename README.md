@@ -3,7 +3,7 @@
 Website for **Akdeinz Motion**, a motion design studio and an East Marketing brand.
 
 - Live: https://akdeinzmotion.com
-- Hosting: Netlify (static, no build step; publish directory is the repo root)
+- Hosting: Netlify (static; publish directory is the repo root; pages are built locally, nothing builds on the host)
 
 ## For automated tools (Pinterest)
 
@@ -14,23 +14,33 @@ Project tiles on the site are placeholders until real work is uploaded (`status.
 ## Structure
 
 ```
-index.html        single page: hero, showreel, work, contact
+index.html        home page: hero, showreel, work, contact (marked blocks are generated)
+work/, reels/     generated: list pages and one page per job. Never edit by hand
+content/          projects.json, the source for every job and reel
 styles.css        brand tokens and layout
 main.js           logo sting, 60° motion studies, scroll effects, form
 thanks.html       form fallback page
 404.html
-sitemap.xml       list of public pages (add new top-level pages here)
+sitemap.xml       generated: public pages
 robots.txt
 netlify.toml      headers and caching
 assets/           logos, favicon, social image, work/ for project videos
 pinterest.json    machine-readable brand and content brief
-media/            animated Pinterest GIFs + pins.json (not loaded by any page)
-tools/            make_pins.py — builds the GIFs in media/
+media/            animated Pinterest GIFs + pins.json (also shown on /reels/)
+tools/            build_pages.py builds the pages; make_pins.py builds the GIFs in media/
 ```
+
+## Building pages
+
+After any change to `content/projects.json`, run:
+
+    python tools/build_pages.py
+
+It rewrites `work/`, `reels/`, `sitemap.xml` and the marked blocks in `index.html`.
 
 ## Updating files
 
-When `styles.css` or `main.js` change, raise the `?v=` number where they are linked in `index.html`, `thanks.html` and `404.html`, so returning visitors get the new version.
+When `styles.css` or `main.js` change, raise `VERSION` in `tools/build_pages.py` and run the build, so returning visitors get the new version.
 
 ## Pinterest GIFs
 
@@ -38,9 +48,27 @@ Built by `python tools/make_pins.py` (needs Pillow, numpy and the Inter font). N
 
 ## Adding work
 
-1. Put clips in `assets/work/` (short, compressed MP4).
-2. On each tile in `index.html`, set `data-video="/assets/work/01.mp4"` and update the title and type.
-3. Showreel: add `assets/reel.mp4` and set `data-src="/assets/reel.mp4"` on the reel video.
+1. Put clips in `assets/work/` (short, compressed MP4). Showreel goes in `assets/reel.mp4`, set as `showreel` in `content/projects.json`.
+2. Add an entry to `projects` in `content/projects.json`. The newest goes first; the first six `work` entries show on the home page.
+3. Run the build.
+
+Only write what is real. A field left out simply doesn't show.
+
+| Field | Meaning |
+| --- | --- |
+| `slug` | Page address, e.g. `client-film` becomes `/work/client-film/` |
+| `kind` | `work` or `reel` |
+| `title`, `summary` | Name and one line about the job |
+| `client`, `year`, `type` | Shown in the facts row |
+| `time`, `price` | How long it took, what it cost. Written as shown, e.g. `3 weeks`, `€2,400` |
+| `what`, `why` | What was done and why. A blank line starts a new paragraph |
+| `result` | Only if a real result exists |
+| `deliverables`, `tools` | Lists |
+| `video`, `poster`, `date` | Clip, its still image, and the date it went up (`YYYY-MM-DD`) |
+| `image`, `alt` | Image or GIF instead of a video, and its description |
+| `study` | Stand-in animation when there is no footage: `rise`, `shutter`, `wave`, `fold`, `stack` or `tunnel` |
+
+A page goes into Google and the sitemap once it has both `what` and `why`. Until then it stays visible on the site but is marked `noindex`.
 
 ## Brand
 

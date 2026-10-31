@@ -120,7 +120,8 @@
 
   /* ---------------- motion studies ----------------
      Stand-ins for project footage until real clips are added.
-     Each is a short piece built only from the brand band. */
+     Each is a short piece built only from the brand band.
+     Names here are listed in STUDIES in tools/build_pages.py. */
 
   // Drifting field of bands rising on the 60° axis. Used for hero + reel.
   function makeField(palette, density = 1, pace = 1) {
@@ -354,6 +355,7 @@
      wheel's steps become one continuous glide instead of jumps. */
   let sy = scrollY;
   let applied = -1;
+  const progress = $("[data-progress]");
 
   function updateScroll() {
     const vh = innerHeight, vw = innerWidth, y = sy;
@@ -391,6 +393,12 @@
       const pts = s.map((pt, i) => `${lerp(pt[0], e[i][0], p).toFixed(1)}px ${lerp(pt[1], e[i][1], p).toFixed(1)}px`);
       reelWin.style.clipPath = `polygon(${pts.join(",")})`;
     }
+
+    // Project pages: thin blue line shows how far down the page you are.
+    if (progress) {
+      const max = doc.scrollHeight - vh;
+      progress.style.transform = `scaleX(${max > 0 ? clamp(y / max).toFixed(4) : 0})`;
+    }
     applied = y;
   }
   addEventListener("resize", () => { applied = -1; updateScroll(); });
@@ -403,26 +411,6 @@
     if (studies[name]) tileScenes.set(c, addScene(c, studies[name]));
   }
 
-  const lightbox = $("[data-lightbox]");
-  const lbVideo = $("[data-lightbox-video]");
-  function openLightbox(src) {
-    lbVideo.src = src;
-    lightbox.hidden = false;
-    document.body.style.overflow = "hidden";
-    lbVideo.play().catch(() => {});
-    $("[data-lightbox-close]").focus();
-  }
-  function closeLightbox() {
-    lbVideo.pause();
-    lbVideo.removeAttribute("src");
-    lbVideo.load();
-    lightbox.hidden = true;
-    document.body.style.overflow = "";
-  }
-  $("[data-lightbox-close]").addEventListener("click", closeLightbox);
-  lightbox.addEventListener("click", (e) => { if (e.target === lightbox) closeLightbox(); });
-  addEventListener("keydown", (e) => { if (e.key === "Escape" && !lightbox.hidden) closeLightbox(); });
-
   const tileIO = new IntersectionObserver((entries) => {
     for (const e of entries) {
       if (!e.isIntersecting) continue;
@@ -434,13 +422,12 @@
     }
   }, { threshold: 0.15 });
 
+  for (const el of $$("[data-rise]")) tileIO.observe(el);
+
   for (const tile of $$("[data-tile]")) {
     tileIO.observe(tile);
     const src = tile.dataset.video;
     if (!src) continue;
-    tile.tabIndex = 0;
-    tile.setAttribute("role", "button");
-    tile.setAttribute("aria-label", `Play ${$("h3", tile).textContent}`);
     let v;
     tile.addEventListener("mouseenter", () => {
       if (!v) {
@@ -451,15 +438,30 @@
       v.play().then(() => tile.classList.add("is-playing")).catch(() => {});
     });
     tile.addEventListener("mouseleave", () => { if (v) { v.pause(); tile.classList.remove("is-playing"); } });
-    tile.addEventListener("click", () => openLightbox(src));
-    tile.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openLightbox(src); } });
   }
 
-  /* ---------------- contact headline ----------------
+  /* ---------------- back up, without touching the address bar ---------------- */
+  if (location.hash === "#top") history.replaceState(null, "", location.pathname + location.search);
+  for (const link of $$("[data-up]")) {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+    });
+  }
+
+  /* ---------------- previous / next with the arrow keys ---------------- */
+  const pagerKeys = { ArrowLeft: $("[data-prev]"), ArrowRight: $("[data-next]") };
+  addEventListener("keydown", (e) => {
+    const link = pagerKeys[e.key];
+    if (!link || e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    if (e.target.closest("input, textarea, video")) return;
+    location.href = link.href;
+  });
+
+  /* ---------------- headlines ----------------
      Each letter drifts back and forth on the 60° axis, all the time,
      offset in time so a slow wave runs through the line. */
-  const title = $("[data-split]");
-  if (title) {
+  for (const title of $$("[data-split]")) {
     const text = title.textContent.trim();
     title.setAttribute("aria-label", text);
     let n = 0;
@@ -468,11 +470,11 @@
       .join(" ");
   }
 
-  /* ---------------- copy email ---------------- */
-  const copyBtn = $("[data-copy]");
-  if (copyBtn) {
+  /* ---------------- copy email / page link ---------------- */
+  for (const copyBtn of $$("[data-copy]")) {
+    const label = $("[data-copy-label]", copyBtn);
+    const rest = label.textContent;
     copyBtn.addEventListener("click", async () => {
-      const label = $("[data-copy-label]", copyBtn);
       try {
         await navigator.clipboard.writeText(copyBtn.dataset.copy);
         label.textContent = "Copied";
@@ -480,7 +482,7 @@
         label.textContent = copyBtn.dataset.copy;
       }
       copyBtn.classList.add("is-done");
-      setTimeout(() => { label.textContent = "Copy address"; copyBtn.classList.remove("is-done"); }, 2200);
+      setTimeout(() => { label.textContent = rest; copyBtn.classList.remove("is-done"); }, 2200);
     });
   }
 
@@ -526,10 +528,9 @@
   if (finePointer && !reduced && cursor) {
     document.addEventListener("pointermove", () => document.body.classList.add("has-cursor"), { once: true });
     document.addEventListener("pointerover", (e) => {
-      const tile = e.target.closest("[data-tile]");
-      const hot = tile && tile.dataset.video;
+      const hot = e.target.closest("[data-cursor-text]");
       cursor.classList.toggle("is-label", !!hot);
-      cursorLabel.textContent = hot ? "Play" : "";
+      cursorLabel.textContent = hot ? hot.dataset.cursorText : "";
       cursor.classList.toggle("is-hidden", !!e.target.closest("input, textarea"));
     });
     document.addEventListener("pointerleave", () => document.body.classList.remove("has-cursor"));

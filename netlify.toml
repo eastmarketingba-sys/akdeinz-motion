@@ -14,7 +14,7 @@
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
 
-# Pinterest GIFs: not loaded by any page; file names carry a version (-v1), so cache for a year
+# Pinterest GIFs, also shown on /reels/; file names carry a version (-v1), so cache for a year
 [[headers]]
   for = "/media/*"
   [headers.values]
