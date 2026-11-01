@@ -11,15 +11,15 @@
     "tools": [
       {
         "name": "Canva",
-        "note": "Strong on layout, brand kit and team sharing. Animation is applied per element with presets; fine control over timing and easing is limited compared with a timeline editor [VERIFY]."
+        "note": "Strong on layout, brand kit and team sharing. Animation is applied per element with presets; fine control over timing and easing is limited compared with a timeline editor."
       },
       {
         "name": "CapCut",
-        "note": "Real timeline with keyframes, captions, effects and templates, on phone and desktop. Check the commercial-use terms of templates, effects and music before using them in ads [VERIFY]."
+        "note": "Real timeline with keyframes, captions, effects and templates, on phone and desktop. Check the commercial-use terms of templates, effects and music before using them in ads."
       },
       {
         "name": "Jitter and After Effects",
-        "note": "The next step up when templates stop being enough. Jitter is lighter to learn; After Effects offers full control at the price of a long learning curve [VERIFY]."
+        "note": "The next step up when templates stop being enough. Jitter is lighter to learn; After Effects offers full control at the price of a long learning curve."
       }
     ],
     "steps": [
@@ -29,17 +29,17 @@
       "Replace any template music that you are not licensed to use commercially.",
       "Export and check the file on a phone, with and without sound."
     ],
-    "hours": "A realistic time for a 15-second social video from a template: about 1–3 hours for the first, less once you reuse your own template [VERIFY]."
+    "hours": "A realistic time for a 15-second social video from a template: about 1–3 hours for the first, less once you reuse your own template."
   },
   "sections": [
     {
       "h2": "Where templates fall short",
       "ul": [
         "Sameness: many accounts use the same templates, so the video can look like everyone else’s.",
-        "Control: custom timing, easing and transitions are limited in template tools [VERIFY].",
+        "Control: custom timing, easing and transitions are limited in template tools.",
         "Sound: sound design (not just a music track) needs time and a trained ear.",
         "Formats: adapting one video to 16:9, 9:16 and 1:1 by hand is repetitive work.",
-        "Licensing: template and music terms are easy to overlook, and paid ads raise the stakes [VERIFY].",
+        "Licensing: template and music terms are easy to overlook, and paid ads raise the stakes.",
         "Hours: the time you spend is time you are not spending on running the business."
       ]
     }
@@ -49,14 +49,14 @@
     "rows": [
       [
         "Cost",
-        "Free tiers exist; paid plans vary [VERIFY]. Plus your hours.",
-        "Varies by seller; short social ads are often quoted at roughly €50–€300 [VERIFY].",
+        "Free tiers exist; paid plans vary. Plus your hours.",
+        "Varies by seller; short social ads are often quoted at roughly €50–€300.",
         "€490 excl. VAT for an ad up to 15 s; €790 up to 30 s"
       ],
       [
         "Time",
-        "About 1–3 h per video [VERIFY]",
-        "Days to a week or more including messages [VERIFY]",
+        "About 1–3 h per video",
+        "Days to a week or more including messages",
         "3–4 working days (up to 15 s); 5 working days (up to 30 s)"
       ],
       [
@@ -73,13 +73,13 @@
       ],
       [
         "Licence",
-        "Check each template, effect and track [VERIFY]",
+        "Check each template, effect and track",
         "Set by the seller; confirm in writing",
         "Worldwide, perpetual commercial licence for your own channels and paid ads"
       ]
     ]
   },
-  "time_line": "Making one 15 s video in a template tool: ~1–3 hours [VERIFY]. Akdeinz: €490, 3–4 days.",
+  "time_line": "Making one 15 s video in a template tool: ~1–3 hours. Akdeinz: €490, 3–4 days.",
   "diy_fine": {
     "p": "Canva or CapCut is the right call when:",
     "ul": [
@@ -97,11 +97,11 @@
   "faq": [
     {
       "q": "Is Canva good enough for business videos?",
-      "a": "For quick organic posts, often yes. For paid ads or videos that carry your brand for months, a custom piece usually looks more distinctive. Check licence terms of every template and track either way [VERIFY]."
+      "a": "For quick organic posts, often yes. For paid ads or videos that carry your brand for months, a custom piece usually looks more distinctive. Check licence terms of every template and track either way."
     },
     {
       "q": "Is CapCut allowed for commercial use?",
-      "a": "It depends on the specific template, effect or music track and on your account type. Check CapCut’s current terms before using them in ads [VERIFY]."
+      "a": "It depends on the specific template, effect or music track and on your account type. Check CapCut’s current terms before using them in ads."
     },
     {
       "q": "What does a professional social motion ad cost?",

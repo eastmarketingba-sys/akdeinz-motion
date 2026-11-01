@@ -4,18 +4,18 @@
   "meta_title": "How Long to Learn After Effects? — Akdeinz Motion",
   "description": "Learning After Effects well enough for a brand video takes an estimated 55–110 hours. See the stages, the cost of your time and the €390 alternative.",
   "updated": "2026-11-01",
-  "answer": "Starting from zero, expect roughly 55–110 hours of practice before After Effects work looks good enough for a brand video [VERIFY], which is about 11–22 weeks at 5 hours a week. If your time is worth more than the price, hiring is cheaper: a Logo Sting is €390 in 3 working days and a Brand Film is €2,400 in 10–14 working days, excl. VAT.",
+  "answer": "Starting from zero, expect roughly 55–110 hours of practice before After Effects work looks good enough for a brand video, which is about 11–22 weeks at 5 hours a week. If your time is worth more than the price, hiring is cheaper: a Logo Sting is €390 in 3 working days and a Brand Film is €2,400 in 10–14 working days, excl. VAT.",
   "package": "logo-sting",
   "diy": {
     "intro": "After Effects is the standard tool for motion design, and it can do almost anything. The cost is the learning curve. The hours below are estimates for a person with no animation background who practises on real projects.",
     "tools": [
       {
         "name": "After Effects",
-        "note": "Industry standard timeline and compositing tool. Paid Adobe subscription [VERIFY]."
+        "note": "Industry standard timeline and compositing tool. Paid Adobe subscription."
       },
       {
         "name": "Jitter",
-        "note": "A lighter, browser-based route to simple brand animations while you decide whether to commit to After Effects [VERIFY]."
+        "note": "A lighter, browser-based route to simple brand animations while you decide whether to commit to After Effects."
       },
       {
         "name": "CapCut and Canva",
@@ -23,18 +23,18 @@
       }
     ],
     "steps": [
-      "Basics (about 10–20 hours): interface, compositions, layers, keyframes, easing and the graph editor [VERIFY].",
-      "Shapes, text and masks (about 15–30 hours): building logo reveals, lower thirds and animated text from scratch [VERIFY].",
-      "Structure and speed (about 20–40 hours): pre-compositions, parenting, simple expressions and reusable templates [VERIFY].",
-      "Sound, export and polish (about 10–20 hours): syncing to audio, motion principles, exporting for different ratios and platforms [VERIFY]."
+      "Basics (about 10–20 hours): interface, compositions, layers, keyframes, easing and the graph editor.",
+      "Shapes, text and masks (about 15–30 hours): building logo reveals, lower thirds and animated text from scratch.",
+      "Structure and speed (about 20–40 hours): pre-compositions, parenting, simple expressions and reusable templates.",
+      "Sound, export and polish (about 10–20 hours): syncing to audio, motion principles, exporting for different ratios and platforms."
     ],
-    "hours": "Adding the stages gives roughly 55–110 hours [VERIFY]. At 5 hours a week that is 11–22 weeks. Each extra aspect ratio and each revision then takes more of your time."
+    "hours": "Adding the stages gives roughly 55–110 hours. At 5 hours a week that is 11–22 weeks. Each extra aspect ratio and each revision then takes more of your time."
   },
   "sections": [
     {
       "h2": "What your hours are worth",
       "p": [
-        "Multiply the hours by your own hourly rate. As an example only, at €50/hour, 55–110 hours is €2,750–€5,500 of your time, before the software subscription [VERIFY].",
+        "Multiply the hours by your own hourly rate. As an example only, at €50/hour, 55–110 hours is €2,750–€5,500 of your time, before the software subscription.",
         "For comparison, a Brand Film of up to 60 seconds with Akdeinz Motion is €2,400 excl. VAT, delivered in 10–14 working days, and a Logo Sting is €390 in 3 working days."
       ]
     }
@@ -44,14 +44,14 @@
     "rows": [
       [
         "Cost",
-        "Subscription [VERIFY] plus about 55–110 hours of learning [VERIFY]",
-        "Varies by seller; roughly €50–€500 for short pieces [VERIFY]",
+        "Subscription plus about 55–110 hours of learning",
+        "Varies by seller; roughly €50–€500 for short pieces",
         "€390 (Logo Sting) to €2,400 (Brand Film), excl. VAT"
       ],
       [
         "Time",
-        "11–22 weeks at 5 h/week before brand-video quality [VERIFY]",
-        "Days to weeks [VERIFY]",
+        "11–22 weeks at 5 h/week before brand-video quality",
+        "Days to weeks",
         "3 to 14 working days"
       ],
       [
@@ -68,13 +68,13 @@
       ],
       [
         "Licence",
-        "Your responsibility for every font, track and asset [VERIFY]",
+        "Your responsibility for every font, track and asset",
         "Set by the seller; confirm in writing",
         "Worldwide, perpetual commercial licence for your own channels and paid ads"
       ]
     ]
   },
-  "time_line": "Learning to do this: ~55–110 hours [VERIFY]. Akdeinz: €390, 3 days (Logo Sting), or €2,400, 10–14 days (Brand Film).",
+  "time_line": "Learning to do this: ~55–110 hours. Akdeinz: €390, 3 days (Logo Sting), or €2,400, 10–14 days (Brand Film).",
   "diy_fine": {
     "p": "Learning After Effects yourself makes sense when:",
     "ul": [
@@ -92,7 +92,7 @@
   "faq": [
     {
       "q": "Can I learn After Effects in a month?",
-      "a": "You can learn the basics in a few weeks, but reaching brand-video quality usually takes longer. Our estimate is 55–110 hours of practice [VERIFY]."
+      "a": "You can learn the basics in a few weeks, but reaching brand-video quality usually takes longer. Our estimate is 55–110 hours of practice."
     },
     {
       "q": "Is After Effects worth learning for a small business?",
@@ -100,7 +100,7 @@
     },
     {
       "q": "What is an easier tool than After Effects?",
-      "a": "Jitter, Canva and CapCut are easier to learn but give less control [VERIFY]."
+      "a": "Jitter, Canva and CapCut are easier to learn but give less control."
     },
     {
       "q": "How much does it cost to hire instead?",

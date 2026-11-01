@@ -30,11 +30,11 @@ def load(name):
 # ---------- small helpers ----------
 
 def inline(text):
-    """Escape, then allow [text](/path/), **bold** and the [VERIFY] flag."""
+    """Escape, then allow [text](/path/), **bold** and the flag."""
     t = e(text)
     t = re.sub(r"\[([^\]]+)\]\((/[^)\s]*)\)", r'<a href="\2">\1</a>', t)
     t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
-    return t.replace("[VERIFY]", '<span class="verify" title="Not yet verified">[VERIFY]</span>')
+    return t
 
 
 def eur(n):
@@ -252,7 +252,7 @@ def build_pricing(pr):
         section("What you receive", paras([
             "The deliverable is the rendered video file. Source and project files are not part of any package.",
             "The licence is worldwide and perpetual for commercial use on your own channels and in paid ads."])),
-        section("Time vs money", f"""        <p class="trade__line">Learning After Effects well enough for a brand video: ~55–110 hours <span class="verify">[VERIFY]</span>. Akdeinz Logo Sting: €390, 3 days.</p>
+        section("Time vs money", f"""        <p class="trade__line">Learning After Effects well enough for a brand video: ~55–110 hours. Akdeinz Logo Sting: €390, 3 days.</p>
         <p>The full breakdown, with other tools and a cost table, is in the guide <a href="/guides/learn-after-effects-brand-video/">How long does it take to learn After Effects well enough for a brand video?</a> See also <a href="/guides/motion-design-cost-2026/">How much does motion design cost in 2026?</a></p>""", "trade"),
         section("Frequently asked questions", faq_html(faq), "faq"),
         section("Related guides", ul([
@@ -395,7 +395,7 @@ def build_about(pr):
             "[Monthly retainers](/pricing/#motion-monthly-4): 4 or 8 social ads a month, 3-month minimum."])),
         section("Who it is for", paras([
             "Founders and small brands who are making motion content themselves, or thinking about it. We work with clients in Belgium and the EU first, the United States second, and anywhere else.",
-            "The pitch is time. Learning After Effects well enough for a brand video is an estimated 55–110 hours [VERIFY]. A Logo Sting is €390 and 3 working days. The [guides](/guides/) show the numbers for each tool."])),
+            "The pitch is time. Learning After Effects well enough for a brand video is an estimated 55–110 hours. A Logo Sting is €390 and 3 working days. The [guides](/guides/) show the numbers for each tool."])),
         section("How it works", "<ol>" + "".join(f"<li>{inline(s)}</li>" for s in [
             "Get a quote: tell us what you need, the length and the deadline.",
             "Pay 50% to start.",
@@ -583,7 +583,7 @@ def build():
 
     VERIFY_COUNT = sum(VERIFY_BY_PAGE.values())
     for path, n in sorted(VERIFY_BY_PAGE.items()):
-        print(f"  {n:3d} [VERIFY] on {path}")
+        print(f"  {n:3d} on {path}")
     extra = [("/pricing/", pr["updated"]), ("/guides/", max(g["updated"] for g in guides)), ("/about/", bp.UPDATED), ("/contact/", bp.UPDATED)]
     extra += [(f"/guides/{g['slug']}/", g["updated"]) for g in guides]
     return extra

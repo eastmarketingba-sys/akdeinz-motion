@@ -26,7 +26,7 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; overflow-x: hidden; max-width: 100%; }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 body {
@@ -40,6 +40,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 img, svg, video, canvas { display: block; max-width: 100%; }
@@ -583,7 +584,7 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   border-top: 1px solid var(--line);
 }
 .footer__mark { width: 58px; height: auto; margin-right: auto; }
-.footer__links { display: flex; gap: 24px; }
+.footer__links { display: flex; flex-wrap: wrap; gap: 8px 20px; max-width: 100%; }
 .footer__links a, .footer__top { transition: color var(--out) var(--ease); }
 .footer__links a:hover, .footer__top:hover { color: var(--white); }
 @media (max-width: 640px) { .footer__mark { width: 100%; max-width: 58px; margin-right: calc(100% - 58px); } }
@@ -734,3 +735,16 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .contact__links a:hover { color: var(--blue); }
 .contact--page .contact__grid:not(:has(.contact__direct)) { grid-template-columns: 5fr 7fr; max-width: none; }
 @media (max-width: 900px) { .contact--page .contact__grid:not(:has(.contact__direct)) { grid-template-columns: 1fr; } }
+
+/* ---- phones: real clips are 4:5, so show them whole; no sideways scroll ---- */
+.tile--clip .tile__media { aspect-ratio: 4 / 5; }
+.tile--clip.tile--a { grid-column: 1 / span 6; }
+.tile--clip.tile--e { grid-column: 4 / span 6; }
+.tile--clip.tile--f { grid-column: 5 / span 5; }
+@media (max-width: 820px) {
+  .tile--clip.tile--a, .tile--clip.tile--d, .tile--clip.tile--e { grid-column: 1 / -1; }
+  .tile--clip.tile--b, .tile--clip.tile--c { grid-column: span 6; }
+  .tile--clip.tile--f { grid-column: 1 / -1; }
+  .tile--clip .tile__media { aspect-ratio: 4 / 5 !important; }
+  .reel__video { object-fit: contain; }
+}

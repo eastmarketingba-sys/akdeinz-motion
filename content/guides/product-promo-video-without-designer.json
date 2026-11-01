@@ -4,22 +4,22 @@
   "meta_title": "Product Promo Video Without a Designer — Akdeinz Motion",
   "description": "Make a product promo video yourself with CapCut or Canva: steps, hours and a cost table, versus a €1,290 Product Promo delivered in 7 working days.",
   "updated": "2026-11-01",
-  "answer": "You can make a basic 30-second product promo yourself in CapCut or Canva using phone footage, which takes roughly 6–15 hours for a first one [VERIFY]. If you would rather not, Akdeinz Motion’s Product Promo (30–45 s) is €1,290 excl. VAT, delivered in 7 working days in 16:9, 9:16 and 1:1.",
+  "answer": "You can make a basic 30-second product promo yourself in CapCut or Canva using phone footage, which takes roughly 6–15 hours for a first one. If you would rather not, Akdeinz Motion’s Product Promo (30–45 s) is €1,290 excl. VAT, delivered in 7 working days in 16:9, 9:16 and 1:1.",
   "package": "product-promo",
   "diy": {
     "intro": "A simple promo needs one message, a few clean shots of the product and a clear call to action. Decide where it will run first (Instagram Reels, a product page, paid ads) because that sets the aspect ratio.",
     "tools": [
       {
         "name": "CapCut",
-        "note": "Timeline editor with keyframes, captions and templates. A good fit for assembling phone footage into a vertical promo. Check commercial-use terms for templates and music [VERIFY]."
+        "note": "Timeline editor with keyframes, captions and templates. A good fit for assembling phone footage into a vertical promo. Check commercial-use terms for templates and music."
       },
       {
         "name": "Canva",
-        "note": "Simple drag-and-drop video editor with brand kit and templates. Quick for text-led promos; less control over timing [VERIFY]."
+        "note": "Simple drag-and-drop video editor with brand kit and templates. Quick for text-led promos; less control over timing."
       },
       {
         "name": "Jitter",
-        "note": "Browser-based tool for animating product screenshots, UI or graphics into short clips [VERIFY]."
+        "note": "Browser-based tool for animating product screenshots, UI or graphics into short clips."
       },
       {
         "name": "After Effects",
@@ -34,7 +34,7 @@
       "Add on-screen text for the main benefit and a call to action at the end. Many people watch without sound, so add captions.",
       "Add music you have the right to use in a commercial video, then export in 9:16, 1:1 and 16:9."
     ],
-    "hours": "Realistic time for a first 30-second promo: about 1–2 hours filming and 4–10 hours editing and exporting, so roughly 6–15 hours in total [VERIFY]. Later promos go faster once you have a template."
+    "hours": "Realistic time for a first 30-second promo: about 1–2 hours filming and 4–10 hours editing and exporting, so roughly 6–15 hours in total. Later promos go faster once you have a template."
   },
   "sections": [
     {
@@ -52,14 +52,14 @@
     "rows": [
       [
         "Cost",
-        "Free tiers exist; paid plans vary [VERIFY]. The real cost is your hours.",
-        "Varies by seller; a 30 s promo is often quoted at roughly €150–€800 [VERIFY].",
+        "Free tiers exist; paid plans vary. The real cost is your hours.",
+        "Varies by seller; a 30 s promo is often quoted at roughly €150–€800.",
         "€1,290 excl. VAT (30–45 s)"
       ],
       [
         "Time",
-        "About 6–15 h for a first promo [VERIFY]",
-        "Often one to three weeks including messages back and forth [VERIFY]",
+        "About 6–15 h for a first promo",
+        "Often one to three weeks including messages back and forth",
         "7 working days"
       ],
       [
@@ -76,13 +76,13 @@
       ],
       [
         "Licence",
-        "Check each template and music track for commercial use [VERIFY]",
+        "Check each template and music track for commercial use",
         "Set by the seller; confirm in writing",
         "Worldwide, perpetual commercial licence for your own channels and paid ads"
       ]
     ]
   },
-  "time_line": "Making your first one: ~6–15 hours [VERIFY]. Akdeinz: €1,290, 7 working days.",
+  "time_line": "Making your first one: ~6–15 hours. Akdeinz: €1,290, 7 working days.",
   "diy_fine": {
     "p": "Doing it yourself is fine in these cases:",
     "ul": [

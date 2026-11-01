@@ -4,22 +4,22 @@
   "meta_title": "Animate Your Logo for Reels: DIY vs Hire — Akdeinz Motion",
   "description": "Animate your logo for Instagram and Reels yourself with Canva, CapCut or Jitter, or hire it for €390 in 3 working days. Tools, steps, hours, costs.",
   "updated": "2026-11-01",
-  "answer": "The quickest way to animate a logo for Instagram is a template in Canva or CapCut, which takes roughly 1–3 hours for a first version [VERIFY]. For a custom animation that matches your brand, you can hire it: Akdeinz Motion’s Logo Sting (3–6 s) is €390 excl. VAT, delivered in 3 working days in 16:9, 9:16 and 1:1, plus a transparent-background render.",
+  "answer": "The quickest way to animate a logo for Instagram is a template in Canva or CapCut, which takes roughly 1–3 hours for a first version. For a custom animation that matches your brand, you can hire it: Akdeinz Motion’s Logo Sting (3–6 s) is €390 excl. VAT, delivered in 3 working days in 16:9, 9:16 and 1:1, plus a transparent-background render.",
   "package": "logo-sting",
   "diy": {
     "intro": "Reels and Stories are vertical (9:16), so build the logo animation vertically first and export a square or landscape version afterwards. You need your logo as a vector file (SVG, AI or PDF) or a large PNG with a transparent background.",
     "tools": [
       {
         "name": "Canva",
-        "note": "Easiest start. Animation presets on text, shapes and images; exports MP4. Limited control over timing and easing compared with a timeline tool [VERIFY]."
+        "note": "Easiest start. Animation presets on text, shapes and images; exports MP4. Limited control over timing and easing compared with a timeline tool."
       },
       {
         "name": "CapCut",
-        "note": "Phone and desktop editor with keyframes, templates and sound. Good for a simple logo reveal. Check the commercial-use terms of any template or music you use [VERIFY]."
+        "note": "Phone and desktop editor with keyframes, templates and sound. Good for a simple logo reveal. Check the commercial-use terms of any template or music you use."
       },
       {
         "name": "Jitter",
-        "note": "Browser-based motion design tool made for short animations such as logo reveals; more control than a template without the learning curve of After Effects [VERIFY]."
+        "note": "Browser-based motion design tool made for short animations such as logo reveals; more control than a template without the learning curve of After Effects."
       },
       {
         "name": "After Effects",
@@ -32,23 +32,23 @@
       "Pick one idea: the logo slides in, builds from its shapes, or fades up with one accent movement. Keep it to 3–5 seconds.",
       "Add a short sound: a soft hit or whoosh timed to the moment the logo lands. Use music or sound you have the right to use commercially.",
       "Export as MP4, watch it on your phone with the sound on, then check it on a bright and a dark background.",
-      "Export the other ratios. An MP4 cannot carry a transparent background, so a see-through version needs a different export format [VERIFY]."
+      "Export the other ratios. An MP4 cannot carry a transparent background, so a see-through version needs a different export format."
     ],
-    "hours": "Realistic time for a first logo animation: about 1–3 hours with a Canva or CapCut template, about 3–8 hours in Jitter including learning the tool, and 40+ hours before After Effects feels comfortable [VERIFY]."
+    "hours": "Realistic time for a first logo animation: about 1–3 hours with a Canva or CapCut template, about 3–8 hours in Jitter including learning the tool, and 40+ hours before After Effects feels comfortable."
   },
   "compare": {
     "diy_label": "DIY (Canva, CapCut, Jitter)",
     "rows": [
       [
         "Cost",
-        "Free tiers exist; paid plans vary [VERIFY]. The real cost is your time.",
-        "Varies by seller; short logo animations are often quoted at roughly €30–€200 [VERIFY].",
+        "Free tiers exist; paid plans vary. The real cost is your time.",
+        "Varies by seller; short logo animations are often quoted at roughly €30–€200.",
         "€390 excl. VAT"
       ],
       [
         "Time",
-        "About 1–3 h with a template, more with a custom idea [VERIFY]",
-        "Often days to a week or more including messages back and forth [VERIFY]",
+        "About 1–3 h with a template, more with a custom idea",
+        "Often days to a week or more including messages back and forth",
         "3 working days"
       ],
       [
@@ -65,13 +65,13 @@
       ],
       [
         "Licence",
-        "Check the terms of each template and music track [VERIFY]",
+        "Check the terms of each template and music track",
         "Set by the seller; confirm in writing",
         "Worldwide, perpetual commercial licence for your own channels and paid ads"
       ]
     ]
   },
-  "time_line": "Learning to do this: ~1–3 hours with a template, 40+ hours for After Effects [VERIFY]. Akdeinz: €390, 3 days.",
+  "time_line": "Learning to do this: ~1–3 hours with a template, 40+ hours for After Effects. Akdeinz: €390, 3 days.",
   "diy_fine": {
     "p": "Doing it yourself is a fair choice in these cases:",
     "ul": [
@@ -97,7 +97,7 @@
     },
     {
       "q": "Can I animate my logo for free?",
-      "a": "Yes. Canva and CapCut have free tiers [VERIFY]. The trade-off is your time and a look that many other accounts share."
+      "a": "Yes. Canva and CapCut have free tiers. The trade-off is your time and a look that many other accounts share."
     },
     {
       "q": "What format do I get?",

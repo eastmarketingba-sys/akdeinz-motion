@@ -18,7 +18,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://akdeinzmotion.com"
 BRAND = "Akdeinz Motion"
-VERSION = 8  # raise when styles.css or main.js change, so visitors get the new files
+VERSION = 9  # raise when styles.css or main.js change, so visitors get the new files
 DEFAULT_IMAGE = "/assets/og.png"
 PRICING = json.loads((ROOT / "content" / "pricing.json").read_text(encoding="utf-8"))
 SITEDATA = json.loads((ROOT / "content" / "site.json").read_text(encoding="utf-8"))
@@ -245,7 +245,7 @@ def tile_media(p):
 
 
 def tile(p, i, level):
-    layout = "tile--reel" if p["kind"] == "reel" else f"tile--{'abcdef'[i % 6]}"
+    layout = "tile--reel" if p["kind"] == "reel" else f"tile--{'abcdef'[i % 6]}" + (" tile--clip" if p.get("video") else "")
     kind = f'<span class="tile__type">{e(p["type"])}</span>' if p.get("type") and p["kind"] == "work" else ""
     return f"""        <article class="tile {layout}" data-tile data-video="{e(p.get('video', ''))}">
           <a class="tile__link" href="{page_path(p)}" data-cursor-text="View">
@@ -262,7 +262,7 @@ def reel_section(src, section_id, link):
       <div class="reel__sticky">
         <div class="reel__window" data-reel-window>
           <canvas class="study" data-study="field" aria-hidden="true"></canvas>
-          <video class="reel__video" data-reel-video data-src="{e(src)}"{poster} muted loop playsinline preload="none"></video>{extra}
+          <video class="reel__video" data-reel-video data-src="{e(src)}" data-src-mobile="{e(src.replace('.mp4', '-m.mp4'))}"{poster} muted loop playsinline preload="none"></video>{extra}
           <button class="reel__sound" data-reel-sound type="button" hidden>
             <span data-sound-label>Sound on</span>
           </button>

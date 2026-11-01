@@ -334,7 +334,8 @@
     addScene(reelCanvas, f.draw, f.init);
   }
   if (reelVideo && reelVideo.dataset.src) {
-    reelVideo.src = reelVideo.dataset.src;
+    // phones get the portrait cut, so nothing is cropped
+    reelVideo.src = matchMedia("(max-width: 820px)").matches && reelVideo.dataset.srcMobile ? reelVideo.dataset.srcMobile : reelVideo.dataset.src;
     reelVideo.preload = "auto";
     reelVideo.addEventListener("canplay", () => {
       reelVideo.classList.add("is-ready");
