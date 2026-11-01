@@ -1,0 +1,118 @@
+{
+  "slug": "learn-after-effects-brand-video",
+  "title": "How long does it take to learn After Effects well enough for a brand video?",
+  "meta_title": "How Long to Learn After Effects? — Akdeinz Motion",
+  "description": "Learning After Effects well enough for a brand video takes an estimated 55–110 hours. See the stages, the cost of your time and the €390 alternative.",
+  "updated": "2026-11-01",
+  "answer": "Starting from zero, expect roughly 55–110 hours of practice before After Effects work looks good enough for a brand video [VERIFY], which is about 11–22 weeks at 5 hours a week. If your time is worth more than the price, hiring is cheaper: a Logo Sting is €390 in 3 working days and a Brand Film is €2,400 in 10–14 working days, excl. VAT.",
+  "package": "logo-sting",
+  "diy": {
+    "intro": "After Effects is the standard tool for motion design, and it can do almost anything. The cost is the learning curve. The hours below are estimates for a person with no animation background who practises on real projects.",
+    "tools": [
+      {
+        "name": "After Effects",
+        "note": "Industry standard timeline and compositing tool. Paid Adobe subscription [VERIFY]."
+      },
+      {
+        "name": "Jitter",
+        "note": "A lighter, browser-based route to simple brand animations while you decide whether to commit to After Effects [VERIFY]."
+      },
+      {
+        "name": "CapCut and Canva",
+        "note": "Faster for simple posts, but they do not replace After Effects skills for custom brand work."
+      }
+    ],
+    "steps": [
+      "Basics (about 10–20 hours): interface, compositions, layers, keyframes, easing and the graph editor [VERIFY].",
+      "Shapes, text and masks (about 15–30 hours): building logo reveals, lower thirds and animated text from scratch [VERIFY].",
+      "Structure and speed (about 20–40 hours): pre-compositions, parenting, simple expressions and reusable templates [VERIFY].",
+      "Sound, export and polish (about 10–20 hours): syncing to audio, motion principles, exporting for different ratios and platforms [VERIFY]."
+    ],
+    "hours": "Adding the stages gives roughly 55–110 hours [VERIFY]. At 5 hours a week that is 11–22 weeks. Each extra aspect ratio and each revision then takes more of your time."
+  },
+  "sections": [
+    {
+      "h2": "What your hours are worth",
+      "p": [
+        "Multiply the hours by your own hourly rate. As an example only, at €50/hour, 55–110 hours is €2,750–€5,500 of your time, before the software subscription [VERIFY].",
+        "For comparison, a Brand Film of up to 60 seconds with Akdeinz Motion is €2,400 excl. VAT, delivered in 10–14 working days, and a Logo Sting is €390 in 3 working days."
+      ]
+    }
+  ],
+  "compare": {
+    "diy_label": "Learn After Effects",
+    "rows": [
+      [
+        "Cost",
+        "Subscription [VERIFY] plus about 55–110 hours of learning [VERIFY]",
+        "Varies by seller; roughly €50–€500 for short pieces [VERIFY]",
+        "€390 (Logo Sting) to €2,400 (Brand Film), excl. VAT"
+      ],
+      [
+        "Time",
+        "11–22 weeks at 5 h/week before brand-video quality [VERIFY]",
+        "Days to weeks [VERIFY]",
+        "3 to 14 working days"
+      ],
+      [
+        "Quality",
+        "Unlimited ceiling, but beginners’ work looks like beginners’ work at first",
+        "Varies widely by seller",
+        "Custom motion design; 16:9, 9:16 and 1:1; sound design included"
+      ],
+      [
+        "Revisions",
+        "Unlimited, using your time",
+        "Set by each seller’s package",
+        "2 rounds included; extra round €90"
+      ],
+      [
+        "Licence",
+        "Your responsibility for every font, track and asset [VERIFY]",
+        "Set by the seller; confirm in writing",
+        "Worldwide, perpetual commercial licence for your own channels and paid ads"
+      ]
+    ]
+  },
+  "time_line": "Learning to do this: ~55–110 hours [VERIFY]. Akdeinz: €390, 3 days (Logo Sting), or €2,400, 10–14 days (Brand Film).",
+  "diy_fine": {
+    "p": "Learning After Effects yourself makes sense when:",
+    "ul": [
+      "You want motion design as a skill or a career, not only one video.",
+      "You will make a steady stream of videos for years, so the learning cost is spread out.",
+      "You enjoy the craft and have the weeks to spend.",
+      "Your needs are small and a lighter tool such as Jitter would do."
+    ],
+    "not_fine": "If you need one or a few videos, or a steady monthly flow without learning a tool, a retainer is the middle route: Motion Monthly 8 is 8 × Social Motion Ad S for €2,890 per month (3-month minimum)."
+  },
+  "example": {
+    "slug": "kinetic-type",
+    "caption": "Kinetic type with changing weight and width (9 s). A self-initiated piece, not a client project."
+  },
+  "faq": [
+    {
+      "q": "Can I learn After Effects in a month?",
+      "a": "You can learn the basics in a few weeks, but reaching brand-video quality usually takes longer. Our estimate is 55–110 hours of practice [VERIFY]."
+    },
+    {
+      "q": "Is After Effects worth learning for a small business?",
+      "a": "Only if you will make videos regularly or want the skill. For one or a few videos, the hours usually cost more than hiring."
+    },
+    {
+      "q": "What is an easier tool than After Effects?",
+      "a": "Jitter, Canva and CapCut are easier to learn but give less control [VERIFY]."
+    },
+    {
+      "q": "How much does it cost to hire instead?",
+      "a": "A Logo Sting is €390 (3 working days), a Social Motion Ad S is €490 (3–4 working days), and a Brand Film is €2,400 (10–14 working days). Prices are excl. VAT."
+    },
+    {
+      "q": "Do I get the After Effects project file?",
+      "a": "No. The deliverable is the rendered video file only."
+    }
+  ],
+  "related": [
+    "motion-design-cost-2026",
+    "canva-capcut-vs-motion-designer"
+  ]
+}

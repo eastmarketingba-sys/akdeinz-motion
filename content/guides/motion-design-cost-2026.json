@@ -1,0 +1,135 @@
+{
+  "slug": "motion-design-cost-2026",
+  "title": "How much does motion design cost in 2026?",
+  "meta_title": "Motion Design Cost in 2026 (EUR) — Akdeinz Motion",
+  "description": "Motion design costs in 2026: freelancer marketplace vs studio vs Akdeinz Motion’s fixed prices from €390 to €2,400 excl. VAT, with turnaround times.",
+  "updated": "2026-11-01",
+  "answer": "Motion design usually costs somewhere between a few tens of euros on freelancer marketplaces and several thousand euros at a studio, depending on length, complexity and licence [VERIFY]. Akdeinz Motion publishes fixed prices in EUR excl. VAT: from €390 for a 3–6 second Logo Sting (3 working days) to €2,400 for a Brand Film of up to 60 seconds (10–14 working days).",
+  "package": "brand-film",
+  "diy": {
+    "intro": "Doing it yourself looks free, but it costs hours and usually a subscription. The honest comparison is your hours multiplied by what your time is worth, plus tools and licences.",
+    "tools": [
+      {
+        "name": "Canva and CapCut",
+        "note": "Free tiers exist; paid plans add features and assets [VERIFY]. Fast for simple posts."
+      },
+      {
+        "name": "Jitter",
+        "note": "Browser-based motion design with more control than a template tool [VERIFY]."
+      },
+      {
+        "name": "After Effects",
+        "note": "Paid Adobe subscription [VERIFY], plus a long learning curve before the work looks professional."
+      }
+    ],
+    "steps": [
+      "Estimate the hours: a first short social animation is often 1–3 hours in a template tool, and a polished 30–60 second video takes far longer [VERIFY].",
+      "Multiply the hours by your own hourly rate. Example only: at €50/hour, 10 hours is €500.",
+      "Add tool subscriptions and any music, font or stock licences you need.",
+      "Compare the total with a fixed quote, and include the risk that the result has to be redone."
+    ],
+    "hours": "A realistic range for a first 30-second promo made from scratch is 6–15 hours [VERIFY]. At an example rate of €50/hour that is €300–€750 of your time, before any subscription."
+  },
+  "sections": [
+    {
+      "h2": "What drives the price of motion design",
+      "ul": [
+        "Length: every extra second needs more design and animation work.",
+        "Complexity: custom illustration and character work cost more than animated text and shapes.",
+        "Formats: 16:9, 9:16 and 1:1 each need their own layout (Akdeinz Motion includes all three).",
+        "Revisions: how many rounds of changes are included and what an extra one costs.",
+        "Music, sound design and voiceover: licensed audio has to be paid for by someone.",
+        "Licence: where and for how long you may use the video, including paid ads.",
+        "Speed: rush work is normally priced higher (Akdeinz Motion: +35% under 72 hours)."
+      ]
+    },
+    {
+      "h2": "Akdeinz Motion price list (EUR, excl. VAT)",
+      "token": "packages"
+    }
+  ],
+  "compare": {
+    "columns": [
+      "Freelancer marketplace",
+      "Traditional studio",
+      "Akdeinz Motion"
+    ],
+    "rows": [
+      [
+        "Cost",
+        "Roughly €50–€500 for short pieces, depending on seller [VERIFY]",
+        "Quoted per project, commonly in the thousands of euros for a 30–60 s piece [VERIFY]",
+        "€390 (Logo Sting) to €2,400 (Brand Film), fixed and published, excl. VAT"
+      ],
+      [
+        "Time",
+        "Days to weeks, depending on seller and revisions [VERIFY]",
+        "Often weeks, depending on scope [VERIFY]",
+        "3 to 14 working days, depending on the package"
+      ],
+      [
+        "Quality",
+        "Varies widely by seller",
+        "Usually high, with a larger team and process [VERIFY]",
+        "Custom motion design; 16:9, 9:16 and 1:1; licensed music and sound design included"
+      ],
+      [
+        "Revisions",
+        "Set by each seller’s package",
+        "Set in the quote",
+        "2 rounds included; extra round €90"
+      ],
+      [
+        "Licence",
+        "Set by the seller; confirm in writing",
+        "Set in the contract",
+        "Worldwide, perpetual commercial licence for your own channels and paid ads"
+      ]
+    ]
+  },
+  "time_line": "Making a 30–45 s promo yourself: ~6–15 hours [VERIFY]. Akdeinz: €1,290, 7 days.",
+  "diy_fine": {
+    "p": "A cheaper route is fine when:",
+    "ul": [
+      "The video is short-lived, for example a one-week promotion.",
+      "You need many quick variations and a template look is acceptable.",
+      "You are validating an idea before spending real budget.",
+      "You have a monthly volume low enough that the hours are not a problem."
+    ],
+    "not_fine": "If you need several ads each month, a retainer is cheaper per ad: Motion Monthly 4 is 4 × Social Motion Ad S for €1,590 per month (€397.50 per ad instead of €490), and Motion Monthly 8 is €2,890 per month (€361.25 per ad), with a 3-month minimum."
+  },
+  "example": {
+    "slug": "3d-depth",
+    "caption": "A 3D motion piece (9 s). A self-initiated piece, not a client project."
+  },
+  "faq": [
+    {
+      "q": "How much does a motion graphics video cost?",
+      "a": "With Akdeinz Motion: €390 for a Logo Sting, €490 for a Social Motion Ad up to 15 s, €790 up to 30 s, €1,290 for a Product Promo, €1,900 for an Explainer and €2,400 for a Brand Film. All prices are excl. VAT."
+    },
+    {
+      "q": "Are music and sound design included?",
+      "a": "Yes. Licensed music and sound design are included in every package."
+    },
+    {
+      "q": "How much do extra seconds cost?",
+      "a": "For Product Promo, Explainer and Brand Film, each extra 15 seconds is +€600 and +2 working days."
+    },
+    {
+      "q": "What are the common add-ons?",
+      "a": "4K +20%, extra revision €90, extra aspect ratio €60, language version €90, copywriting €150, voiceover at cost, rush under 72 hours +35%."
+    },
+    {
+      "q": "How does payment work?",
+      "a": "50% to start and 50% after you approve a watermarked preview."
+    },
+    {
+      "q": "Is a monthly retainer cheaper?",
+      "a": "Per ad, yes. Motion Monthly 4 works out at €397.50 per Social Motion Ad S and Motion Monthly 8 at €361.25, compared with €490 for a single ad. The minimum is 3 months."
+    }
+  ],
+  "related": [
+    "canva-capcut-vs-motion-designer",
+    "learn-after-effects-brand-video"
+  ]
+}

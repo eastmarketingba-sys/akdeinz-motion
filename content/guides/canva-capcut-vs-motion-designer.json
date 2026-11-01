@@ -1,0 +1,123 @@
+{
+  "slug": "canva-capcut-vs-motion-designer",
+  "title": "Canva or CapCut vs a professional motion designer",
+  "meta_title": "Canva or CapCut vs a Motion Designer — Akdeinz Motion",
+  "description": "Canva and CapCut are fine for quick template videos. When is a professional motion designer worth it? Compare cost, time, quality, revisions and licence.",
+  "updated": "2026-11-01",
+  "answer": "Canva and CapCut are good enough for quick, template-based social videos. A professional motion designer is worth it when the video represents your brand for months, runs as a paid ad, or needs movement a template cannot give you. Akdeinz Motion starts at €390 for a Logo Sting and €490 for a Social Motion Ad of up to 15 seconds (3–4 working days), excl. VAT.",
+  "package": "social-motion-ad-s",
+  "diy": {
+    "intro": "Both tools are built for speed. You pick a template, swap in your text, logo and footage, and export. The trade-off is that the result looks like the template.",
+    "tools": [
+      {
+        "name": "Canva",
+        "note": "Strong on layout, brand kit and team sharing. Animation is applied per element with presets; fine control over timing and easing is limited compared with a timeline editor [VERIFY]."
+      },
+      {
+        "name": "CapCut",
+        "note": "Real timeline with keyframes, captions, effects and templates, on phone and desktop. Check the commercial-use terms of templates, effects and music before using them in ads [VERIFY]."
+      },
+      {
+        "name": "Jitter and After Effects",
+        "note": "The next step up when templates stop being enough. Jitter is lighter to learn; After Effects offers full control at the price of a long learning curve [VERIFY]."
+      }
+    ],
+    "steps": [
+      "Choose a template that fits the format you need (9:16 for Reels, 1:1 or 16:9 for other placements).",
+      "Replace the placeholder text, logo and footage with your own, using your brand colours and fonts.",
+      "Shorten it. Social ads that get to the point in the first seconds usually hold attention better than slow intros.",
+      "Replace any template music that you are not licensed to use commercially.",
+      "Export and check the file on a phone, with and without sound."
+    ],
+    "hours": "A realistic time for a 15-second social video from a template: about 1–3 hours for the first, less once you reuse your own template [VERIFY]."
+  },
+  "sections": [
+    {
+      "h2": "Where templates fall short",
+      "ul": [
+        "Sameness: many accounts use the same templates, so the video can look like everyone else’s.",
+        "Control: custom timing, easing and transitions are limited in template tools [VERIFY].",
+        "Sound: sound design (not just a music track) needs time and a trained ear.",
+        "Formats: adapting one video to 16:9, 9:16 and 1:1 by hand is repetitive work.",
+        "Licensing: template and music terms are easy to overlook, and paid ads raise the stakes [VERIFY].",
+        "Hours: the time you spend is time you are not spending on running the business."
+      ]
+    }
+  ],
+  "compare": {
+    "diy_label": "Canva / CapCut",
+    "rows": [
+      [
+        "Cost",
+        "Free tiers exist; paid plans vary [VERIFY]. Plus your hours.",
+        "Varies by seller; short social ads are often quoted at roughly €50–€300 [VERIFY].",
+        "€490 excl. VAT for an ad up to 15 s; €790 up to 30 s"
+      ],
+      [
+        "Time",
+        "About 1–3 h per video [VERIFY]",
+        "Days to a week or more including messages [VERIFY]",
+        "3–4 working days (up to 15 s); 5 working days (up to 30 s)"
+      ],
+      [
+        "Quality",
+        "Template look; depends on your choices",
+        "Varies widely by seller",
+        "Custom motion design; 16:9, 9:16 and 1:1; sound design included"
+      ],
+      [
+        "Revisions",
+        "Unlimited, using your time",
+        "Set by each seller’s package",
+        "2 rounds included; extra round €90"
+      ],
+      [
+        "Licence",
+        "Check each template, effect and track [VERIFY]",
+        "Set by the seller; confirm in writing",
+        "Worldwide, perpetual commercial licence for your own channels and paid ads"
+      ]
+    ]
+  },
+  "time_line": "Making one 15 s video in a template tool: ~1–3 hours [VERIFY]. Akdeinz: €490, 3–4 days.",
+  "diy_fine": {
+    "p": "Canva or CapCut is the right call when:",
+    "ul": [
+      "The video is for organic posts on your own channels and has a short life.",
+      "You need a quick variation of something you already have.",
+      "Speed matters more than a distinctive look.",
+      "You enjoy making them and the volume is low."
+    ],
+    "not_fine": "Hire when the video will run as a paid ad, represents the brand for months, or you need several every month. For that, Motion Monthly 4 is €1,590 per month for 4 × Social Motion Ad S (3-month minimum)."
+  },
+  "example": {
+    "slug": "scroll-stopper",
+    "caption": "A social ad format built around a 60° cut (9 s). A self-initiated piece, not a client ad."
+  },
+  "faq": [
+    {
+      "q": "Is Canva good enough for business videos?",
+      "a": "For quick organic posts, often yes. For paid ads or videos that carry your brand for months, a custom piece usually looks more distinctive. Check licence terms of every template and track either way [VERIFY]."
+    },
+    {
+      "q": "Is CapCut allowed for commercial use?",
+      "a": "It depends on the specific template, effect or music track and on your account type. Check CapCut’s current terms before using them in ads [VERIFY]."
+    },
+    {
+      "q": "What does a professional social motion ad cost?",
+      "a": "With Akdeinz Motion, a Social Motion Ad S (up to 15 s) is €490 and an Ad M (up to 30 s) is €790, excl. VAT."
+    },
+    {
+      "q": "How fast can a motion designer deliver?",
+      "a": "Ad S in 3–4 working days, Ad M in 5 working days. Rush delivery under 72 hours is +35%."
+    },
+    {
+      "q": "Can I get a monthly package?",
+      "a": "Yes. Motion Monthly 4 is €1,590 per month and Motion Monthly 8 is €2,890 per month, both with a 3-month minimum."
+    }
+  ],
+  "related": [
+    "animate-logo-instagram-reels",
+    "motion-design-cost-2026"
+  ]
+}

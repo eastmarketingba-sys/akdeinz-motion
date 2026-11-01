@@ -3,9 +3,8 @@
   "brand": {
     "name": "Akdeinz Motion",
     "type": "Motion design studio",
-    "parent": "An East Marketing brand",
     "tagline": "Movement, framed with intent.",
-    "story": "The mark joins an A and an M into one continuous form, built from parallel bands cut at 60°. Where the bands overlap, a soft fold catches the light, like film or ribbon pulled through a frame. Akdeniz is the Mediterranean: sharp coastlines, waves, sun on water, kept abstract and geometric."
+    "story": "The mark joins an A and an M into one continuous form, built from parallel bands cut at 60°. Where the bands overlap, a soft fold catches the light, like film or ribbon pulled through a frame. The Mediterranean: sharp coastlines, waves, sun on water, kept abstract and geometric."
   },
   "links": {
     "website": "https://akdeinzmotion.com",
@@ -18,7 +17,7 @@
     "palette": {
       "black": "#000000",
       "white": "#FFFFFF",
-      "akdeniz_blue": "#2E6BFF",
+      "akdeinz_blue": "#2E6BFF",
       "aegean": "#0B35C9",
       "fold_grey": "#E6E6E6",
       "carbon": "#191919"

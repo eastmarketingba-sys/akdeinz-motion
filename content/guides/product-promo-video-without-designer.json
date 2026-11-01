@@ -1,0 +1,126 @@
+{
+  "slug": "product-promo-video-without-designer",
+  "title": "How to make a product promo video without a designer",
+  "meta_title": "Product Promo Video Without a Designer — Akdeinz Motion",
+  "description": "Make a product promo video yourself with CapCut or Canva: steps, hours and a cost table, versus a €1,290 Product Promo delivered in 7 working days.",
+  "updated": "2026-11-01",
+  "answer": "You can make a basic 30-second product promo yourself in CapCut or Canva using phone footage, which takes roughly 6–15 hours for a first one [VERIFY]. If you would rather not, Akdeinz Motion’s Product Promo (30–45 s) is €1,290 excl. VAT, delivered in 7 working days in 16:9, 9:16 and 1:1.",
+  "package": "product-promo",
+  "diy": {
+    "intro": "A simple promo needs one message, a few clean shots of the product and a clear call to action. Decide where it will run first (Instagram Reels, a product page, paid ads) because that sets the aspect ratio.",
+    "tools": [
+      {
+        "name": "CapCut",
+        "note": "Timeline editor with keyframes, captions and templates. A good fit for assembling phone footage into a vertical promo. Check commercial-use terms for templates and music [VERIFY]."
+      },
+      {
+        "name": "Canva",
+        "note": "Simple drag-and-drop video editor with brand kit and templates. Quick for text-led promos; less control over timing [VERIFY]."
+      },
+      {
+        "name": "Jitter",
+        "note": "Browser-based tool for animating product screenshots, UI or graphics into short clips [VERIFY]."
+      },
+      {
+        "name": "After Effects",
+        "note": "Maximum control for animated product graphics. Not realistic as a first tool for a one-off promo."
+      }
+    ],
+    "steps": [
+      "Write the single sentence the video must get across, for example what the product does and for whom.",
+      "Make a short shot list: the product alone, the product in use, one close-up detail, and the logo.",
+      "Film on a phone in daylight, with a steady surface. Shoot vertical and keep extra space around the product so you can crop to 1:1 and 16:9.",
+      "Assemble the clips in CapCut or Canva. Open with the most interesting shot; do not start with the logo.",
+      "Add on-screen text for the main benefit and a call to action at the end. Many people watch without sound, so add captions.",
+      "Add music you have the right to use in a commercial video, then export in 9:16, 1:1 and 16:9."
+    ],
+    "hours": "Realistic time for a first 30-second promo: about 1–2 hours filming and 4–10 hours editing and exporting, so roughly 6–15 hours in total [VERIFY]. Later promos go faster once you have a template."
+  },
+  "sections": [
+    {
+      "h2": "A simple structure for a 30-second product promo",
+      "ul": [
+        "0–3 seconds: a hook, usually the problem or the most striking shot.",
+        "3–10 seconds: what the product is and the main benefit.",
+        "10–22 seconds: the product in use or the key features, one idea per shot.",
+        "22–30 seconds: proof or result if you have a real one, then the call to action and logo."
+      ]
+    }
+  ],
+  "compare": {
+    "diy_label": "DIY (CapCut, Canva)",
+    "rows": [
+      [
+        "Cost",
+        "Free tiers exist; paid plans vary [VERIFY]. The real cost is your hours.",
+        "Varies by seller; a 30 s promo is often quoted at roughly €150–€800 [VERIFY].",
+        "€1,290 excl. VAT (30–45 s)"
+      ],
+      [
+        "Time",
+        "About 6–15 h for a first promo [VERIFY]",
+        "Often one to three weeks including messages back and forth [VERIFY]",
+        "7 working days"
+      ],
+      [
+        "Quality",
+        "Depends on your footage and editing skill; template look is common",
+        "Varies widely by seller",
+        "Custom motion design; 16:9, 9:16 and 1:1; licensed music and sound design included"
+      ],
+      [
+        "Revisions",
+        "Unlimited, using your time",
+        "Set by each seller’s package",
+        "2 rounds included; extra round €90"
+      ],
+      [
+        "Licence",
+        "Check each template and music track for commercial use [VERIFY]",
+        "Set by the seller; confirm in writing",
+        "Worldwide, perpetual commercial licence for your own channels and paid ads"
+      ]
+    ]
+  },
+  "time_line": "Making your first one: ~6–15 hours [VERIFY]. Akdeinz: €1,290, 7 working days.",
+  "diy_fine": {
+    "p": "Doing it yourself is fine in these cases:",
+    "ul": [
+      "You are testing whether a product sells and the promo is disposable.",
+      "You already have good footage and only need to cut it together with text.",
+      "The video runs organically on your own channels and is replaced every few weeks.",
+      "You have more time than budget and want to learn basic editing."
+    ],
+    "not_fine": "Consider hiring when the promo will run as a paid ad for months, sits at the top of a product page, or when 6–15 hours of your week are worth more than the difference in price."
+  },
+  "example": {
+    "slug": "product-ui",
+    "caption": "An illustrative product and UI animation (9 s). A self-initiated piece, not a client product promo."
+  },
+  "faq": [
+    {
+      "q": "How long should a product promo video be?",
+      "a": "Akdeinz Motion’s Product Promo is 30–45 seconds. Social ads are shorter: up to 15 s (€490) or up to 30 s (€790)."
+    },
+    {
+      "q": "Can I make a product video with only a phone?",
+      "a": "Yes. Good light, a steady surface and a clear message matter more than the camera. Assemble the clips in CapCut or Canva."
+    },
+    {
+      "q": "What does a Product Promo cost?",
+      "a": "€1,290 excl. VAT, delivered in 7 working days. Each extra 15 seconds is +€600 and +2 working days."
+    },
+    {
+      "q": "Which formats are included?",
+      "a": "16:9, 9:16 and 1:1 in 1080p MP4. Licensed music and sound design are included."
+    },
+    {
+      "q": "Can it be done faster?",
+      "a": "Rush delivery under 72 hours is +35%."
+    }
+  ],
+  "related": [
+    "animate-logo-instagram-reels",
+    "kickstarter-launch-video"
+  ]
+}

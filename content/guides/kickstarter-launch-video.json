@@ -1,0 +1,133 @@
+{
+  "slug": "kickstarter-launch-video",
+  "title": "How to make a Kickstarter launch video",
+  "meta_title": "How to Make a Kickstarter Launch Video — Akdeinz Motion",
+  "description": "How to make a Kickstarter launch video: structure, tools, realistic hours and costs, versus an Explainer from €1,900 delivered in 10–14 working days.",
+  "updated": "2026-11-01",
+  "answer": "A Kickstarter launch video has to show what the product is, who is behind it and why someone should back it, in the first seconds. Most founders can put together a basic one themselves in roughly 15–40 hours [VERIFY]. If you want an animated one, Akdeinz Motion’s Explainer (up to 60 s) is €1,900 excl. VAT and a Product Promo (30–45 s) is €1,290, delivered in 10–14 and 7 working days.",
+  "package": "explainer",
+  "diy": {
+    "intro": "Plan the video before you open any tool. The campaign page is where backers decide, so the video should answer three questions quickly: what is it, why does it matter, and what do I get if I back it.",
+    "tools": [
+      {
+        "name": "CapCut",
+        "note": "Timeline editor for combining phone footage, captions and music. Check commercial-use terms of templates and music [VERIFY]."
+      },
+      {
+        "name": "Canva",
+        "note": "Simple editor for text-led or screenshot-led videos [VERIFY]."
+      },
+      {
+        "name": "Jitter",
+        "note": "Browser-based tool for animating product graphics or UI [VERIFY]."
+      },
+      {
+        "name": "After Effects",
+        "note": "Best for custom animated product explanations, but needs weeks of learning (see the guide on learning After Effects)."
+      }
+    ],
+    "steps": [
+      "Write a one-page script: the problem, your product as the solution, how it works, who you are, what backers get and the call to action.",
+      "Collect real footage: the prototype or product in use, the team or founder, and any workshop or testing shots. Real prototypes build more trust than renders.",
+      "Record clear audio. A voiceover or the founder speaking to the camera matters more than fancy visuals.",
+      "Edit to the script. Put the product and its main benefit in the opening seconds, and cut anything that does not help someone decide.",
+      "Add captions, since many people watch without sound, and music you have the right to use commercially.",
+      "Check Kickstarter’s current guidance for campaign videos before you finalise, and export a 16:9 file for the page [VERIFY]."
+    ],
+    "hours": "A realistic range for a first launch video is about 15–40 hours across scripting, gathering footage, editing and revisions [VERIFY]. Animated explainer sections add more."
+  },
+  "sections": [
+    {
+      "h2": "What to put in a launch video",
+      "ul": [
+        "The hook: the problem or the most striking shot of the product.",
+        "The product: what it is and how it works, shown rather than described.",
+        "The people: who is making it and why they are qualified to deliver it.",
+        "The offer: what backers receive and when, kept consistent with the campaign page.",
+        "The ask: one clear call to action at the end."
+      ]
+    },
+    {
+      "h2": "Reuse the video beyond the campaign page",
+      "p": [
+        "A launch video is also material for social teasers and paid ads. Akdeinz Motion delivers 16:9, 9:16 and 1:1 versions of every package, so the same piece can run on the campaign page, in Reels and in feed ads."
+      ]
+    }
+  ],
+  "compare": {
+    "diy_label": "DIY (CapCut, Canva)",
+    "rows": [
+      [
+        "Cost",
+        "Free tiers exist; paid plans vary [VERIFY]. The real cost is your hours.",
+        "Varies by seller; launch videos are often quoted at roughly €200–€1,500 [VERIFY].",
+        "€1,290 (Product Promo, 30–45 s) or €1,900 (Explainer, up to 60 s), excl. VAT"
+      ],
+      [
+        "Time",
+        "About 15–40 h [VERIFY]",
+        "Often two to four weeks including messages [VERIFY]",
+        "7 working days (Product Promo); 10–14 working days (Explainer)"
+      ],
+      [
+        "Quality",
+        "Depends on your footage, script and editing",
+        "Varies widely by seller",
+        "Custom motion design; 16:9, 9:16 and 1:1; licensed music and sound design included"
+      ],
+      [
+        "Revisions",
+        "Unlimited, using your time",
+        "Set by each seller’s package",
+        "2 rounds included; extra round €90"
+      ],
+      [
+        "Licence",
+        "Check each template and track [VERIFY]",
+        "Set by the seller; confirm in writing",
+        "Worldwide, perpetual commercial licence for your own channels and paid ads"
+      ]
+    ]
+  },
+  "time_line": "Making a launch video yourself: ~15–40 hours [VERIFY]. Akdeinz: €1,900, 10–14 working days.",
+  "diy_fine": {
+    "p": "Making it yourself is a reasonable choice when:",
+    "ul": [
+      "Your story depends on you speaking on camera and showing the real product.",
+      "The budget is the campaign itself, and every euro matters before launch.",
+      "You have enough weeks before launch to make, review and revise it.",
+      "You have good phone footage and only need to cut it together with text and captions."
+    ],
+    "not_fine": "Consider hiring if the product is hard to explain with footage alone, you want animated sequences, or you cannot afford 15–40 hours before launch. Plan backwards from your launch date and leave time for your own feedback on the preview."
+  },
+  "example": {
+    "slug": "process-explainer",
+    "caption": "A process explainer from brief to delivery (9 s). A self-initiated piece, not a client project."
+  },
+  "faq": [
+    {
+      "q": "How long should a Kickstarter video be?",
+      "a": "Keep it as short as the story allows. Akdeinz Motion’s Explainer and Brand Film are up to 60 seconds, and each extra 15 seconds is +€600 for Product Promo, Explainer and Brand Film. Check Kickstarter’s current guidance too [VERIFY]."
+    },
+    {
+      "q": "Do I need a professional video to launch on Kickstarter?",
+      "a": "Not necessarily. A clear script, real product footage and good audio matter most. Animation helps when the product is hard to show on camera."
+    },
+    {
+      "q": "How much does a Kickstarter video cost?",
+      "a": "With Akdeinz Motion: Product Promo €1,290 (30–45 s) or Explainer €1,900 (up to 60 s), excl. VAT. Voiceover is billed at cost and copywriting is €150."
+    },
+    {
+      "q": "How long does it take?",
+      "a": "A Product Promo takes 7 working days, an Explainer 10–14 working days. Rush under 72 hours is +35%."
+    },
+    {
+      "q": "Which formats do I get?",
+      "a": "16:9, 9:16 and 1:1 in 1080p MP4, so the video can run on the campaign page and in social ads. 4K is +20%."
+    }
+  ],
+  "related": [
+    "product-promo-video-without-designer",
+    "motion-design-cost-2026"
+  ]
+}

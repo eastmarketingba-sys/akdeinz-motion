@@ -1,0 +1,42 @@
+{
+  "_readme": "Source for /pricing/, the Service and Offer schema, llms.txt and the price tables on the home page. All prices EUR, excl. VAT. After any change run: python tools/build_pages.py",
+  "updated": "2026-11-01",
+  "packages": [
+    {"id": "logo-sting", "name": "Logo Sting", "length": "3–6 s", "price": 390, "turnaround": "3 working days",
+     "description": "A 3–6 second animated logo. Includes a transparent-background render."},
+    {"id": "social-motion-ad-s", "name": "Social Motion Ad S", "length": "up to 15 s", "price": 490, "turnaround": "3–4 working days",
+     "description": "A social motion ad of up to 15 seconds, delivered in 16:9, 9:16 and 1:1."},
+    {"id": "social-motion-ad-m", "name": "Social Motion Ad M", "length": "up to 30 s", "price": 790, "turnaround": "5 working days",
+     "description": "A social motion ad of up to 30 seconds, delivered in 16:9, 9:16 and 1:1."},
+    {"id": "product-promo", "name": "Product Promo", "length": "30–45 s", "price": 1290, "turnaround": "7 working days",
+     "description": "A 30–45 second product promo video, delivered in 16:9, 9:16 and 1:1."},
+    {"id": "explainer", "name": "Explainer", "length": "up to 60 s", "price": 1900, "turnaround": "10–14 working days",
+     "description": "An animated explainer video of up to 60 seconds, delivered in 16:9, 9:16 and 1:1."},
+    {"id": "brand-film", "name": "Brand Film", "length": "up to 60 s", "price": 2400, "turnaround": "10–14 working days",
+     "description": "A brand film of up to 60 seconds, delivered in 16:9, 9:16 and 1:1."}
+  ],
+  "extra_length": {"applies_to": "Product Promo, Explainer and Brand Film", "length": "+15 s", "price": 600, "turnaround": "+2 working days"},
+  "retainers": [
+    {"id": "motion-monthly-4", "name": "Motion Monthly 4", "contents": "4 × Social Motion Ad S per month", "price": 1590, "ads": 4},
+    {"id": "motion-monthly-8", "name": "Motion Monthly 8", "contents": "8 × Social Motion Ad S per month", "price": 2890, "ads": 8}
+  ],
+  "retainer_minimum": "3 months",
+  "included": [
+    "16:9, 9:16 and 1:1 versions",
+    "1080p MP4",
+    "Licensed music and sound design",
+    "2 revision rounds",
+    "Worldwide, perpetual commercial licence for your own channels and paid ads",
+    "Logo Sting also includes a transparent-background render"
+  ],
+  "addons": [
+    {"name": "4K delivery", "price": "+20%"},
+    {"name": "Extra revision round", "price": "€90"},
+    {"name": "Extra aspect ratio", "price": "€60"},
+    {"name": "Language version", "price": "€90"},
+    {"name": "Copywriting", "price": "€150"},
+    {"name": "Voiceover", "price": "At cost"},
+    {"name": "Rush delivery (under 72 hours)", "price": "+35%"}
+  ],
+  "payment": "50% to start, 50% after you approve a watermarked preview."
+}

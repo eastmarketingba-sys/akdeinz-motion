@@ -1,4 +1,5 @@
-"""Builds the Work and Reels pages from content/projects.json.
+"""Builds the Work and Reels pages from content/projects.json, and (through site_pages.py)
+the pricing, guides, about, llms.txt and robots.txt files.
 
 Writes work/, reels/ and sitemap.xml, refreshes the marked blocks in index.html
 and sets the ?v= number on every page. Never edit the generated files by hand:
@@ -9,6 +10,7 @@ change content/projects.json (or this script) and run
 import json
 import re
 import shutil
+import sys
 from datetime import date
 from html import escape as e
 from pathlib import Path
@@ -16,8 +18,17 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 SITE = "https://akdeinzmotion.com"
 BRAND = "Akdeinz Motion"
-VERSION = 6  # raise when styles.css or main.js change, so visitors get the new files
+VERSION = 8  # raise when styles.css or main.js change, so visitors get the new files
 DEFAULT_IMAGE = "/assets/og.png"
+PRICING = json.loads((ROOT / "content" / "pricing.json").read_text(encoding="utf-8"))
+SITEDATA = json.loads((ROOT / "content" / "site.json").read_text(encoding="utf-8"))
+UPDATED = SITEDATA["updated"]
+MONTHS = ("January February March April May June July August September October November December").split()
+
+
+def long_date(iso):
+    y, m, d = (int(x) for x in iso.split("-"))
+    return f"{d} {MONTHS[m - 1]} {y}"
 
 SECTIONS = {
     "work": {
@@ -29,7 +40,7 @@ SECTIONS = {
         "description": "Showreel and short motion pieces by Akdeinz Motion, built on the 60° axis.",
     },
 }
-FACTS = (("client", "Client"), ("year", "Year"), ("type", "Type"), ("time", "Time taken"), ("price", "Price"))
+FACTS = (("client", "Client"), ("year", "Year"), ("type", "Type"), ("length", "Length"), ("time", "Time taken"), ("price", "Price"))
 STORY = (("what", "What I did"), ("why", "Why I did it"), ("result", "Result"))
 LISTS = (("deliverables", "Delivered"), ("tools", "Tools"))
 STUDIES = {"rise", "shutter", "wave", "fold", "stack", "tunnel"}
@@ -59,7 +70,77 @@ def breadcrumbs(*trail):
     return {"@type": "BreadcrumbList", "itemListElement": items}
 
 
+def analytics():
+    """GA4, only when content/site.json has a ga_id. Consent starts as denied: no analytics cookies until a visitor agrees."""
+    gid = SITEDATA.get("ga_id", "").strip()
+    if not gid:
+        return ""
+    if not re.fullmatch(r"G-[A-Z0-9]{6,12}", gid):
+        raise SystemExit("site.json: ga_id must look like G-XXXXXXXXXX")
+    return f"""
+  <script async src="https://www.googletagmanager.com/gtag/js?id={gid}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {{ dataLayer.push(arguments); }}
+    gtag('consent', 'default', {{ analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' }});
+    gtag('js', new Date());
+    gtag('config', '{gid}');
+  </script>
+  <script>
+    /* EU consent banner: analytics stays off until a visitor presses Accept; the choice is remembered in this browser */
+    (function () {{
+      var KEY = 'am-consent', saved = null;
+      try {{ saved = localStorage.getItem(KEY); }} catch (e) {{}}
+      function grant() {{ gtag('consent', 'update', {{ analytics_storage: 'granted' }}); }}
+      if (saved === 'granted') {{ grant(); return; }}
+      if (saved === 'denied') return;
+      document.addEventListener('DOMContentLoaded', function () {{
+        var bar = document.createElement('div');
+        bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Cookie consent');
+        bar.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:99;max-width:560px;background:#191919;color:#fff;border:1px solid #333;padding:16px;font:14px/1.5 Inter,system-ui,sans-serif';
+        bar.innerHTML = '<p style="margin:0 0 12px">We use Google Analytics to count visits. It only runs if you accept. No ads, no tracking across sites.</p>' +
+          '<button type="button" data-a style="background:#fff;color:#000;border:0;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer">Accept</button> ' +
+          '<button type="button" data-d style="background:transparent;color:#fff;border:1px solid #666;padding:10px 16px;font:inherit;cursor:pointer">Decline</button>';
+        function done(v) {{ try {{ localStorage.setItem(KEY, v); }} catch (e) {{}} if (v === 'granted') grant(); bar.remove(); }}
+        bar.querySelector('[data-a]').onclick = function () {{ done('granted'); }};
+        bar.querySelector('[data-d]').onclick = function () {{ done('denied'); }};
+        document.body.appendChild(bar);
+      }});
+    }})();
+  </script>"""
+
+
+def org_node():
+    node = {
+        "@type": "Organization", "@id": f"{SITE}/#org", "name": BRAND, "url": f"{SITE}/",
+        "logo": {"@type": "ImageObject", "url": SITE + DEFAULT_IMAGE, "width": 1080, "height": 1080},
+        "email": SITEDATA["email"], "slogan": "Movement, framed with intent.",
+        "description": SITEDATA["bio"],
+    }
+    same_as = [u for u in (SITEDATA["socials"].get("instagram"), SITEDATA["socials"].get("contra")) if u]
+    if same_as:
+        node["sameAs"] = same_as
+    return node
+
+
+def person_node():
+    who = SITEDATA["person"]
+    return {"@type": "Person", "@id": f"{SITE}/#esref", "name": who["name"], "jobTitle": who["jobTitle"],
+            "url": f"{SITE}/about/", "image": SITE + who["image"], "worksFor": org_ref()}
+
+
+def org_ref():
+    return {"@id": f"{SITE}/#org"}
+
+
+def og_for(path):
+    """Each page has its own 1200×630 social image in assets/og/ (made by tools/make_og.py)."""
+    name = path.strip("/").replace("/", "-") or "home"
+    return f"/assets/og/{name}.jpg" if (ROOT / "assets" / "og" / f"{name}.jpg").exists() else None
+
+
 def head(title, description, path, *, image=DEFAULT_IMAGE, og_type="website", noindex=False, graph=()):
+    image = og_for(path) or image
     url, img = SITE + path, absolute(image)
     card = "summary" if image == DEFAULT_IMAGE else "summary_large_image"
     robots = '\n  <meta name="robots" content="noindex, follow">' if noindex else ""
@@ -79,24 +160,32 @@ def head(title, description, path, *, image=DEFAULT_IMAGE, og_type="website", no
   <meta property="og:image" content="{e(img)}">
   <meta property="og:url" content="{url}">
   <meta property="og:type" content="{og_type}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="{card}">
+  <meta name="twitter:title" content="{e(title)}">
+  <meta name="twitter:description" content="{e(description)}">
+  <meta name="twitter:image" content="{e(img)}">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/og.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v={VERSION}">{ld}
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="/styles.css?v={VERSION}">{ld}{analytics()}
 </head>
 <body>
 """
 
 
-def nav(section=None, here=None, home=False, progress=False):
-    def link(kind):
-        s = SECTIONS[kind]
-        current = f' aria-current="{here}"' if kind == section else ""
-        return f'<a href="{s["path"]}"{current}>{s["label"]}</a>'
+NAV = (("work", "/work/", "Work"), ("pricing", "/pricing/", "Pricing"), ("guides", "/guides/", "Guides"), ("about", "/about/", "About"))
 
+
+def nav(section=None, here=None, home=False, progress=False):
+    section = "work" if section == "reel" else section  # reels have no tab of their own
+    links = "\n      ".join(
+        f'<a href="{path}"' + (f' aria-current="{here}"' if key == section else "") + f">{label}</a>"
+        for key, path, label in NAV)
     up = " data-up" if home else ""
     bar = '\n    <span class="nav__progress" data-progress aria-hidden="true"></span>' if progress else ""
     return f"""  <header class="nav" data-nav>
@@ -104,22 +193,25 @@ def nav(section=None, here=None, home=False, progress=False):
       <img src="/assets/logo-horizontal-white.svg" alt="{BRAND}" width="176" height="25">
     </a>
     <nav class="nav__links" aria-label="Primary">
-      {link("reel")}
-      {link("work")}
-      <a href="/#contact" class="nav__cta"><span class="dot" aria-hidden="true"></span>Contact</a>
+      {links}
+      <a href="/contact/" class="nav__cta"><span class="dot" aria-hidden="true"></span>Contact</a>
     </nav>{bar}
   </header>"""
 
 
-def footer():
+def footer(updated=None):
+    updated = updated or UPDATED
     return f"""  <footer class="footer">
     <img class="footer__mark" src="/assets/mark-white.svg" alt="" width="58" height="20">
     <nav class="footer__links" aria-label="Footer">
-      <a class="caption" href="/reels/">Reels</a>
       <a class="caption" href="/work/">Work</a>
-      <a class="caption" href="/#contact">Contact</a>
+      <a class="caption" href="/reels/">Reels</a>
+      <a class="caption" href="/pricing/">Pricing</a>
+      <a class="caption" href="/guides/">Guides</a>
+      <a class="caption" href="/about/">About</a>
+      <a class="caption" href="/contact/">Contact</a>
     </nav>
-    <span class="caption">An East Marketing brand</span>
+    <span class="caption">Last updated: <time datetime="{updated}">{long_date(updated)}</time></span>
     <span class="caption">© <span data-year>{date.today().year}</span></span>
     <a class="caption footer__top" href="/" data-up>Back up</a>
   </footer>"""
@@ -128,7 +220,7 @@ def footer():
 def closing():
     return """  <section class="contact contact--cta" aria-labelledby="cta-title">
     <h2 id="cta-title" class="contact__title" data-split>Let’s make it move.</h2>
-    <a class="send" href="/#contact">
+    <a class="send" href="/contact/">
       <span class="send__label">Contact</span>
       <span class="send__band" aria-hidden="true"></span>
     </a>
@@ -164,12 +256,13 @@ def tile(p, i, level):
 
 
 def reel_section(src, section_id, link):
+    poster = f' poster="{src.rsplit(".", 1)[0]}.jpg"' if src else ""
     extra = '\n          <a class="reel__link" href="/reels/" aria-label="All reels" data-cursor-text="Reels"></a>' if link else ""
     return f"""    <section class="reel" id="{section_id}" data-reel aria-label="Showreel">
       <div class="reel__sticky">
         <div class="reel__window" data-reel-window>
           <canvas class="study" data-study="field" aria-hidden="true"></canvas>
-          <video class="reel__video" data-reel-video data-src="{e(src)}" muted loop playsinline preload="none"></video>{extra}
+          <video class="reel__video" data-reel-video data-src="{e(src)}"{poster} muted loop playsinline preload="none"></video>{extra}
           <button class="reel__sound" data-reel-sound type="button" hidden>
             <span data-sound-label>Sound on</span>
           </button>
@@ -195,6 +288,29 @@ def page_head(section, count):
     </header>"""
 
 
+def piece_length(p):
+    return p.get("length") or "Looping study"
+
+
+def piece_list(items):
+    rows = "\n".join(
+        f'          <tr><th scope="row"><a href="{page_path(p)}">{e(p["title"])}</a></th>'
+        f'<td>{e(p.get("type", ""))}</td><td>{e(piece_length(p))}</td><td>{e(p.get("summary", ""))}</td></tr>'
+        for p in items)
+    return f"""    <section class="pieces" aria-labelledby="pieces-title">
+      <h2 id="pieces-title" class="caption">All pieces</h2>
+      <p>Self-initiated studies and spec pieces made in the Akdeinz Motion identity. No client names are used.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="All pieces">
+        <table>
+          <thead><tr><th scope="col">Title</th><th scope="col">Type</th><th scope="col">Length</th><th scope="col">Brief</th></tr></thead>
+          <tbody>
+{rows}
+          </tbody>
+        </table>
+      </div>
+    </section>"""
+
+
 def listing_page(section, items, showreel):
     s = SECTIONS[section]
     tiles = "\n".join(tile(p, i, "h2") for i, p in enumerate(items))
@@ -212,6 +328,7 @@ def listing_page(section, items, showreel):
 {tiles}
       </div>
     </section>"""
+    body += "\n\n" + piece_list(items)
 
     graph = [
         {"@type": "CollectionPage", "name": f"{s['title']} — {BRAND}", "description": s["description"],
@@ -242,10 +359,17 @@ def paragraphs(text):
     return "\n".join(f"<p>{e(part.strip())}</p>" for part in text.split("\n\n") if part.strip())
 
 
+def video_tag(p, poster, attrs):
+    """MP4 (H.264) plus WebM; nothing downloads until the visitor presses play."""
+    webm = f'<source src="{e(p["webm"])}" type="video/webm">' if p.get("webm") else ""
+    label = e(p.get("alt") or p["title"])
+    return f'<video{poster} {attrs} aria-label="{label}"><source src="{e(p["video"])}" type="video/mp4">{webm}</video>'
+
+
 def case_media(p):
     if p.get("video"):
         poster = f' poster="{e(p["poster"])}"' if p.get("poster") else ""
-        return f'<video src="{e(p["video"])}"{poster} controls playsinline preload="metadata"></video>'
+        return video_tag(p, poster, 'controls playsinline preload="none"')
     if p.get("image"):
         return f'<img src="{e(p["image"])}" alt="{e(p.get("alt", ""))}" width="600" height="900" decoding="async">'
     return f'<canvas class="study" data-study="{e(p["study"])}" role="img" aria-label="{e(p["title"])} animation"></canvas>'
@@ -270,6 +394,16 @@ def case_story(p):
           <ul class="chips">{chips}</ul>
         </section>""")
     return "\n".join(blocks)
+
+
+def case_package(p):
+    pk = next((x for x in PRICING["packages"] if x["id"] == p.get("package")), None)
+    if not pk:
+        return ""
+    return f"""        <section class="block" data-rise>
+          <h2 class="caption">Related package</h2>
+          <div class="prose"><p><a href="/pricing/#{pk['id']}">{e(pk['name'])}</a>: {e(pk['length'])}, €{pk['price']:,}, {e(pk['turnaround'])}. Prices are in EUR, excl. VAT.</p></div>
+        </section>"""
 
 
 def pager(items, i):
@@ -307,6 +441,8 @@ def case_graph(p):
     if p.get("video") and p.get("poster") and p.get("date"):  # all three are required by Google
         graph.append({"@type": "VideoObject", "name": p["title"], "description": description,
                       "contentUrl": absolute(p["video"]), "thumbnailUrl": absolute(p["poster"]), "uploadDate": p["date"]})
+        if p.get("seconds"):
+            graph[-1]["duration"] = f"PT{int(p['seconds'])}S"
     return graph
 
 
@@ -325,7 +461,7 @@ def detail_page(p, items, i):
 {nav(p["kind"], here="true", progress=True)}
 
   <main id="main">
-    <article class="case case--{p['kind']}">
+    <article class="case case--{p['kind']}{' case--clip' if p.get('video') else ''}">
       <header class="case__head">
         <canvas class="hero__field" data-field aria-hidden="true"></canvas>
         <nav class="crumbs caption" aria-label="Breadcrumb">
@@ -342,6 +478,7 @@ def detail_page(p, items, i):
         <div class="case__info">
         {case_facts(p)}
 {case_story(p)}
+{case_package(p)}
           <p class="case__share">
             <button class="copy" type="button" data-copy="{SITE + path}"><span data-copy-label>Copy link</span></button>
           </p>
@@ -387,7 +524,12 @@ def update_home(work, showreel):
 
       <a class="more" href="/work/">All work</a>"""
     text = path.read_text(encoding="utf-8")
+    text = fill(text, "analytics", analytics().strip("\n"))
+    text = fill(text, "jsonld", json_ld([org_node(), {"@type": "WebSite", "@id": f"{SITE}/#site", "name": BRAND, "url": f"{SITE}/",
+                                                       "publisher": org_ref(), "inLanguage": "en"}, person_node()]))
     text = fill(text, "nav", nav(home=True))
+    text = fill(text, "offer", site_pages.home_offer())
+    text = fill(text, "socials", site_pages.socials_block())
     text = fill(text, "reel", reel_section(showreel, "reel", link=True))
     text = fill(text, "work", block)
     text = fill(text, "footer", footer())
@@ -401,13 +543,38 @@ def bump_versions():
         path.write_text(text, encoding="utf-8", newline="\n")
 
 
-def write_sitemap(projects):
-    today = date.today().isoformat()
-    paths = ["/", "/work/", "/reels/"] + [page_path(p) for p in projects if is_ready(p)]
-    urls = "\n".join(f"  <url>\n    <loc>{SITE}{path}</loc>\n    <lastmod>{today}</lastmod>\n  </url>" for path in paths)
+def write_sitemap(projects, extra):
+    paths = [("/", UPDATED), ("/work/", UPDATED), ("/reels/", UPDATED)]
+    paths += [(page_path(p), UPDATED) for p in projects if is_ready(p)] + list(extra)
+    urls = "\n".join(f"  <url>\n    <loc>{SITE}{path}</loc>\n    <lastmod>{mod}</lastmod>\n  </url>" for path, mod in paths)
     xml = f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n{urls}\n</urlset>\n'
     (ROOT / "sitemap.xml").write_text(xml, encoding="utf-8", newline="\n")
     return paths
+
+
+def write_video_sitemap(projects):
+    """sitemap-video.xml: one entry per portfolio piece that has a video page in the main sitemap."""
+    blocks = []
+    for p in projects:
+        if not (is_ready(p) and p.get("video") and p.get("poster") and p.get("date")):
+            continue
+        dur = f"\n      <video:duration>{int(p['seconds'])}</video:duration>" if p.get("seconds") else ""
+        blocks.append(f"""  <url>
+    <loc>{SITE}{page_path(p)}</loc>
+    <video:video>
+      <video:thumbnail_loc>{e(absolute(p['poster']))}</video:thumbnail_loc>
+      <video:title>{e(p['title'])}</video:title>
+      <video:description>{e(p.get('summary', p['title']))}</video:description>
+      <video:content_loc>{e(absolute(p['video']))}</video:content_loc>{dur}
+      <video:publication_date>{p['date']}</video:publication_date>
+      <video:family_friendly>yes</video:family_friendly>
+      <video:requires_subscription>no</video:requires_subscription>
+    </video:video>
+  </url>""")
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+           'xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">\n' + "\n".join(blocks) + "\n</urlset>\n")
+    (ROOT / "sitemap-video.xml").write_text(xml, encoding="utf-8", newline="\n")
+    return len(blocks)
 
 
 def check(projects):
@@ -422,8 +589,16 @@ def check(projects):
 
 
 def main():
+    global site_pages
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import site_pages as sp
+    site_pages = sp
+    sp.init(sys.modules[__name__])
     data = json.loads((ROOT / "content" / "projects.json").read_text(encoding="utf-8"))
     projects, showreel = data["projects"], data.get("showreel", "")
+    for p in projects:  # looping pieces with a known length show it
+        if p.get("seconds") and not p.get("length"):
+            p["length"] = f"{p['seconds']:g} s" + ("" if p.get("video") else " loop")
     check(projects)
 
     for folder in ("work", "reels"):  # both are fully generated, so removed jobs leave nothing behind
@@ -435,11 +610,15 @@ def main():
         for i, p in enumerate(items):
             write(page_path(p), detail_page(p, items, i))
 
+    extra = site_pages.build()
     update_home(groups["work"], showreel)
     bump_versions()
-    paths = write_sitemap(projects)
+    paths = write_sitemap(projects, extra)
+    videos = write_video_sitemap(projects)
+    print(f"Video sitemap entries: {videos}")
     hidden = sum(not is_ready(p) for p in projects)
     print(f"Built {len(projects)} detail pages. In the sitemap: {len(paths)}. Waiting for details: {hidden}.")
+    print(f"[VERIFY] markers still on the site: {site_pages.VERIFY_COUNT}")
 
 
 if __name__ == "__main__":

@@ -1,7 +1,172 @@
 {
   "_readme": "Source for the Work and Reels pages. After any change run: python tools/build_pages.py. Only write what is real: a field left out simply doesn't show. A page goes into Google once it has both what and why. Fields are listed in README.md.",
-  "showreel": "",
+  "showreel": "/assets/reel.mp4",
   "projects": [
+    {
+      "slug": "logo-animation",
+      "kind": "work",
+      "title": "Logo animation: your logo, in motion",
+      "type": "Spec piece: logo animation",
+      "year": "2026",
+      "summary": "The Akdeinz Motion mark shown in three motion styles: build, fold and slide.",
+      "video": "/assets/work/logo.mp4",
+      "webm": "/assets/work/logo.webm",
+      "poster": "/assets/work/logo.jpg",
+      "date": "2026-11-01",
+      "seconds": 9,
+      "what": "A 9-second logo animation. The mark is built from five bands cut at 60°, and three small previews show it in three motion styles: build, fold and slide.\n\nIt is a self-initiated piece made for the Akdeinz Motion studio. No client is shown.",
+      "why": "A logo sting is the shortest motion job, and a logo can move in more than one way. This piece shows the same mark in three styles, so you can see the difference before you choose.",
+      "alt": "White Akdeinz Motion logo on black above the line Your logo, in motion, with three small previews labelled build, fold and slide.",
+      "package": "logo-sting"
+    },
+    {
+      "slug": "kinetic-type",
+      "kind": "work",
+      "title": "Kinetic type: words that move people",
+      "type": "Spec piece: kinetic type",
+      "year": "2026",
+      "summary": "A headline set in type that changes weight and width.",
+      "video": "/assets/work/kinetic-type.mp4",
+      "webm": "/assets/work/kinetic-type.webm",
+      "poster": "/assets/work/kinetic-type.jpg",
+      "date": "2026-11-01",
+      "seconds": 9,
+      "what": "A 9-second kinetic type piece. The words Words that move people are set in type of different weights and widths, with the axis values shown underneath.\n\nIt is a self-initiated piece made for the Akdeinz Motion studio. No client is shown.",
+      "why": "Type alone can carry a social ad. This piece shows how changes in weight and width give a headline its rhythm.",
+      "alt": "The words Words that move people in large black and blue type on an off-white background, with weight and width values below.",
+      "package": "social-motion-ad-s"
+    },
+    {
+      "slug": "product-ui",
+      "kind": "work",
+      "title": "Product and UI animation: one scroll",
+      "type": "Spec piece: product and UI animation",
+      "year": "2026",
+      "summary": "An illustrative app screen walked through in one scroll.",
+      "video": "/assets/work/product-ui.mp4",
+      "webm": "/assets/work/product-ui.webm",
+      "poster": "/assets/work/product-ui.jpg",
+      "date": "2026-11-01",
+      "seconds": 9,
+      "what": "A 9-second product and UI animation. An app dashboard with a weekly activity chart is shown, and a cursor reaches a blue Generate button.\n\nThe interface is illustrative and is not a real product. It is a self-initiated piece made for the Akdeinz Motion studio. No client is shown.",
+      "why": "Founders often need to explain software in a few seconds. This piece shows how a screen can be walked through without a voiceover.",
+      "alt": "A browser window with a dashboard, a line chart and a blue Generate button under the headline Explain your product in one scroll.",
+      "package": "product-promo"
+    },
+    {
+      "slug": "scroll-stopper",
+      "kind": "work",
+      "title": "Social scroll-stopper ad",
+      "type": "Spec piece: social ad",
+      "year": "2026",
+      "summary": "A feed of grey placeholder cards is cut by a diagonal, and one card moves.",
+      "video": "/assets/work/scroll-stopper.mp4",
+      "webm": "/assets/work/scroll-stopper.webm",
+      "poster": "/assets/work/scroll-stopper.jpg",
+      "date": "2026-11-01",
+      "seconds": 9,
+      "what": "A 9-second social ad format. A feed of grey placeholder cards is cut by a 60° diagonal, and a black card marked Now in motion takes the other side of the frame.\n\nIt is a self-initiated piece made for the Akdeinz Motion studio. No client is shown.",
+      "why": "In a feed, a moving piece stands out from static ones. This piece makes that point in the format itself.",
+      "alt": "A grey feed of placeholder cards split by a diagonal, with a black card reading Now in motion and the line Motion gets watched.",
+      "package": "social-motion-ad-s"
+    },
+    {
+      "slug": "3d-depth",
+      "kind": "work",
+      "title": "3D motion: depth that sells",
+      "type": "Spec piece: 3D motion",
+      "year": "2026",
+      "summary": "The mark in 3D on a blue field, with small floating cubes.",
+      "video": "/assets/work/3d.mp4",
+      "webm": "/assets/work/3d.webm",
+      "poster": "/assets/work/3d.jpg",
+      "date": "2026-11-01",
+      "seconds": 9,
+      "what": "A 9-second 3D piece. The mark is built from 36 layers and rotated around its vertical axis, on a blue background with small cubes.\n\nIt is a self-initiated piece made for the Akdeinz Motion studio. No client is shown.",
+      "why": "Depth gives a flat logo weight. This piece shows how little 3D it takes to lift a mark.",
+      "alt": "A white three-dimensional AM mark on a blue field with floating cubes and the line Depth that sells."
+    },
+    {
+      "slug": "data-motion",
+      "kind": "work",
+      "title": "Data motion: numbers people actually watch",
+      "type": "Spec piece: data motion",
+      "year": "2026",
+      "summary": "A monthly bar chart with an average line and three key figures.",
+      "video": "/assets/work/data.mp4",
+      "webm": "/assets/work/data.webm",
+      "poster": "/assets/work/data.jpg",
+      "date": "2026-11-01",
+      "seconds": 9,
+      "what": "A 9-second data animation. A bar chart by month has a blue average line, and three key figures sit under it: 63%, a trend line and 11,871 units.\n\nAll numbers are sample data made for this piece. It is a self-initiated piece made for the Akdeinz Motion studio. No client is shown.",
+      "why": "A table of numbers is rarely read. This piece shows how a chart can be set up so the key figure stands out.",
+      "alt": "A bar chart with a blue average line, a ring showing 63% and a total of 11,871 units on a cream background."
+    },
+    {
+      "slug": "process-explainer",
+      "kind": "work",
+      "title": "Process explainer: how a film gets made",
+      "type": "Spec piece: process explainer",
+      "year": "2026",
+      "summary": "A timeline from brief to delivery, drawn like a film editor.",
+      "video": "/assets/work/process.mp4",
+      "webm": "/assets/work/process.webm",
+      "poster": "/assets/work/process.jpg",
+      "date": "2026-11-01",
+      "seconds": 9,
+      "what": "A 9-second process piece. A timeline with four steps, brief, board, motion and deliver, sits under a frame that shows the 16:9 format.\n\nIt is a self-initiated piece made for the Akdeinz Motion studio. No client is shown.",
+      "why": "Clients often ask what happens after they say yes. This piece shows the four steps in one clip.",
+      "alt": "A dark timeline with the steps brief, board, motion and deliver under the headline How a film gets made.",
+      "package": "explainer"
+    },
+    {
+      "slug": "formats",
+      "kind": "work",
+      "title": "Every format: one idea on every screen",
+      "type": "Spec piece: aspect ratios",
+      "year": "2026",
+      "summary": "One layout shown in 16:9, 1:1, 4:5 and 9:16.",
+      "video": "/assets/work/formats.mp4",
+      "webm": "/assets/work/formats.webm",
+      "poster": "/assets/work/formats.jpg",
+      "date": "2026-11-01",
+      "seconds": 9,
+      "what": "A 9-second piece about formats. A phone-shaped frame carries the mark, and four format labels sit under it: 16:9, 1:1, 4:5 and 9:16.\n\nIt is a self-initiated piece made for the Akdeinz Motion studio. No client is shown.",
+      "why": "Each channel wants a different shape. Every Akdeinz Motion package includes 16:9, 9:16 and 1:1 versions, and this piece shows why.",
+      "alt": "A phone-shaped frame with the Akdeinz Motion mark and four format labels under the headline One idea. Every screen."
+    },
+    {
+      "slug": "generative",
+      "kind": "work",
+      "title": "Generative motion: made, not templated",
+      "type": "Spec piece: generative motion",
+      "year": "2026",
+      "summary": "The mark made of about 1,400 particles on a blue glow.",
+      "video": "/assets/work/generative.mp4",
+      "webm": "/assets/work/generative.webm",
+      "poster": "/assets/work/generative.jpg",
+      "date": "2026-11-01",
+      "seconds": 9,
+      "what": "A 9-second generative piece. The mark is made of about 1,400 particles, generated from a fixed seed so the result can be repeated.\n\nIt is a self-initiated piece made for the Akdeinz Motion studio. No client is shown.",
+      "why": "Template animations look like each other. This piece shows motion that is written for one mark.",
+      "alt": "A grey particle-textured AM mark on black with a blue glow under the headline Made, not templated."
+    },
+    {
+      "slug": "say-hello",
+      "kind": "work",
+      "title": "Social UI animation: a DM and a storyboard",
+      "type": "Spec piece: social UI animation",
+      "year": "2026",
+      "summary": "A short chat that ends with a storyboard file, drawn as a phone interface.",
+      "video": "/assets/work/contact.mp4",
+      "webm": "/assets/work/contact.webm",
+      "poster": "/assets/work/contact.jpg",
+      "date": "2026-11-01",
+      "seconds": 9,
+      "what": "A 9-second piece drawn as a chat window. A message about a launch in three weeks is followed by a storyboard file in the thread.\n\nThe chat is illustrative. No real people or brands are shown. It is a self-initiated piece made for the Akdeinz Motion studio. No client is shown.",
+      "why": "Most jobs begin with a short message. This piece shows how that first message leads to a storyboard.",
+      "alt": "A dark chat window from Akdeinz Motion showing messages about a launch and a storyboard file under the headline Your next launch starts with a DM."
+    },
     {
       "slug": "rise-study",
       "kind": "work",
@@ -64,7 +229,8 @@
       "year": "2026",
       "summary": "The Akdeinz Motion mark: an A and an M joined into one form, built from bands cut at 60°.",
       "image": "/media/akdeinz-motion-sting-v1.gif",
-      "alt": "White Akdeinz Motion logo animating in on a black background, with the tagline Movement, framed with intent, and a blue band."
+      "alt": "White Akdeinz Motion logo animating in on a black background, with the tagline Movement, framed with intent, and a blue band.",
+      "seconds": 5
     },
     {
       "slug": "field",
@@ -74,7 +240,8 @@
       "year": "2026",
       "summary": "Bands rising on a single 60° axis, the motion system behind the Akdeinz Motion identity.",
       "image": "/media/akdeinz-motion-field-v1.gif",
-      "alt": "White, grey and blue parallelogram bands rising diagonally across a black background above the words Movement, framed with intent."
+      "alt": "White, grey and blue parallelogram bands rising diagonally across a black background above the words Movement, framed with intent.",
+      "seconds": 4
     },
     {
       "slug": "waves",
@@ -82,9 +249,10 @@
       "title": "Sharp coastlines, waves, sun on water",
       "type": "Reel",
       "year": "2026",
-      "summary": "Akdeniz is the Mediterranean, kept abstract and geometric. A study in 60° bands.",
+      "summary": "The Mediterranean, kept abstract and geometric. A study in 60° bands.",
       "image": "/media/akdeinz-motion-waves-v1.gif",
-      "alt": "Rows of white and blue slanted bands rising and falling like waves on a black background."
+      "alt": "Rows of white and blue slanted bands rising and falling like waves on a black background.",
+      "seconds": 3
     },
     {
       "slug": "axis",
@@ -94,7 +262,8 @@
       "year": "2026",
       "summary": "Bands enter and exit along their own diagonal. A motion principle of the identity.",
       "image": "/media/akdeinz-motion-axis-v1.gif",
-      "alt": "White and blue slanted bands widening and narrowing in a wave on a black background, above the words Move on the 60° axis."
+      "alt": "White and blue slanted bands widening and narrowing in a wave on a black background, above the words Move on the 60° axis.",
+      "seconds": 3
     },
     {
       "slug": "fold",
@@ -104,7 +273,8 @@
       "year": "2026",
       "summary": "Where the bands overlap, a soft fold catches the light, like film or ribbon pulled through a frame.",
       "image": "/media/akdeinz-motion-fold-v1.gif",
-      "alt": "White bands sliding across a dark frame and turning light grey where they fold at an edge, above the words Reveal with the fold."
+      "alt": "White bands sliding across a dark frame and turning light grey where they fold at an edge, above the words Reveal with the fold.",
+      "seconds": 4
     },
     {
       "slug": "easing",
@@ -114,7 +284,8 @@
       "year": "2026",
       "summary": "Every Akdeinz Motion animation uses one curve: cubic-bezier(0.2, 0.8, 0.2, 1).",
       "image": "/media/akdeinz-motion-easing-v1.gif",
-      "alt": "Six slanted bands sliding in one after another, holding, then sliding out, above the words One easing."
+      "alt": "Six slanted bands sliding in one after another, holding, then sliding out, above the words One easing.",
+      "seconds": 3.6
     },
     {
       "slug": "climb",
@@ -122,9 +293,10 @@
       "title": "Rises on 60° and climbs",
       "type": "Reel",
       "year": "2026",
-      "summary": "A sister brand to East Marketing, same family, different direction: Akdeinz Motion rises on 60° and climbs.",
+      "summary": "Akdeinz Motion rises on 60° and climbs: slanted bars stacking upward, the top one blue.",
       "image": "/media/akdeinz-motion-climb-v1.gif",
-      "alt": "Slanted white bars stacking upward like a staircase, the top one blue, above the words Rises on 60° and climbs."
+      "alt": "Slanted white bars stacking upward like a staircase, the top one blue, above the words Rises on 60° and climbs.",
+      "seconds": 4
     },
     {
       "slug": "geometry",
@@ -134,7 +306,8 @@
       "year": "2026",
       "summary": "The Akdeinz Motion identity: flat geometry, angled cuts, no gradients, no ornament.",
       "image": "/media/akdeinz-motion-geometry-v1.gif",
-      "alt": "Nested black and white slanted shapes moving into the frame like a tunnel, above the words Flat geometry, angled cuts, no ornament."
+      "alt": "Nested black and white slanted shapes moving into the frame like a tunnel, above the words Flat geometry, angled cuts, no ornament.",
+      "seconds": 3
     }
   ]
 }

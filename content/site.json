@@ -1,0 +1,16 @@
+{
+  "_readme": "Site-wide facts. After any change run: python tools/build_pages.py. Leave a value empty to keep it off the site. 'updated' is the date shown as Last updated and used as lastmod: change it whenever page content changes.",
+  "updated": "2026-11-01",
+  "email": "hello@akdeinzmotion.com",
+  "socials": {
+    "instagram": "https://www.instagram.com/akdeinzmotion/",
+    "contra": "https://contra.com/akdeinz_motion_5luxv9ev"
+  },
+  "ga_id": "G-GMWG4FCK5F",
+  "bio": "Motion design for founders and small brands. Logo stings, social ads, product promos, explainers, brand films. From €390, 3 working days. Your time is valuable. Let me take care of it.",
+  "person": {
+    "name": "Eşref Türkoğlu",
+    "jobTitle": "Creative Director",
+    "image": "/assets/esref-turkoglu.jpg"
+  }
+}

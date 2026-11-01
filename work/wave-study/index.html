@@ -14,14 +14,50 @@
   <meta property="og:image" content="https://akdeinzmotion.com/assets/og.png">
   <meta property="og:url" content="https://akdeinzmotion.com/work/wave-study/">
   <meta property="og:type" content="article">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Wave study — Akdeinz Motion">
+  <meta name="twitter:description" content="Rows of bands whose height follows a Mediterranean swell.">
+  <meta name="twitter:image" content="https://akdeinzmotion.com/assets/og.png">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/og.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=6">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="/styles.css?v=8">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CreativeWork","name":"Wave study","description":"Rows of bands whose height follows a Mediterranean swell.","url":"https://akdeinzmotion.com/work/wave-study/","inLanguage":"en","creator":{"@id":"https://akdeinzmotion.com/#org","@type":"Organization","name":"Akdeinz Motion","url":"https://akdeinzmotion.com/"},"dateCreated":"2026","genre":"Motion study"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://akdeinzmotion.com/"},{"@type":"ListItem","position":2,"name":"Work","item":"https://akdeinzmotion.com/work/"},{"@type":"ListItem","position":3,"name":"Wave study","item":"https://akdeinzmotion.com/work/wave-study/"}]}]}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMWG4FCK5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+    gtag('js', new Date());
+    gtag('config', 'G-GMWG4FCK5F');
+  </script>
+  <script>
+    /* EU consent banner: analytics stays off until a visitor presses Accept; the choice is remembered in this browser */
+    (function () {
+      var KEY = 'am-consent', saved = null;
+      try { saved = localStorage.getItem(KEY); } catch (e) {}
+      function grant() { gtag('consent', 'update', { analytics_storage: 'granted' }); }
+      if (saved === 'granted') { grant(); return; }
+      if (saved === 'denied') return;
+      document.addEventListener('DOMContentLoaded', function () {
+        var bar = document.createElement('div');
+        bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Cookie consent');
+        bar.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:99;max-width:560px;background:#191919;color:#fff;border:1px solid #333;padding:16px;font:14px/1.5 Inter,system-ui,sans-serif';
+        bar.innerHTML = '<p style="margin:0 0 12px">We use Google Analytics to count visits. It only runs if you accept. No ads, no tracking across sites.</p>' +
+          '<button type="button" data-a style="background:#fff;color:#000;border:0;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer">Accept</button> ' +
+          '<button type="button" data-d style="background:transparent;color:#fff;border:1px solid #666;padding:10px 16px;font:inherit;cursor:pointer">Decline</button>';
+        function done(v) { try { localStorage.setItem(KEY, v); } catch (e) {} if (v === 'granted') grant(); bar.remove(); }
+        bar.querySelector('[data-a]').onclick = function () { done('granted'); };
+        bar.querySelector('[data-d]').onclick = function () { done('denied'); };
+        document.body.appendChild(bar);
+      });
+    })();
+  </script>
 </head>
 <body>
 
@@ -32,9 +68,11 @@
       <img src="/assets/logo-horizontal-white.svg" alt="Akdeinz Motion" width="176" height="25">
     </a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="/reels/">Reels</a>
       <a href="/work/" aria-current="true">Work</a>
-      <a href="/#contact" class="nav__cta"><span class="dot" aria-hidden="true"></span>Contact</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/guides/">Guides</a>
+      <a href="/about/">About</a>
+      <a href="/contact/" class="nav__cta"><span class="dot" aria-hidden="true"></span>Contact</a>
     </nav>
     <span class="nav__progress" data-progress aria-hidden="true"></span>
   </header>
@@ -58,6 +96,7 @@
         <div class="case__info">
         <dl class="facts" data-rise><div><dt class="caption">Year</dt><dd>2026</dd></div><div><dt class="caption">Type</dt><dd>Motion study</dd></div></dl>
 
+
           <p class="case__share">
             <button class="copy" type="button" data-copy="https://akdeinzmotion.com/work/wave-study/"><span data-copy-label>Copy link</span></button>
           </p>
@@ -79,7 +118,7 @@
 
   <section class="contact contact--cta" aria-labelledby="cta-title">
     <h2 id="cta-title" class="contact__title" data-split>Let’s make it move.</h2>
-    <a class="send" href="/#contact">
+    <a class="send" href="/contact/">
       <span class="send__label">Contact</span>
       <span class="send__band" aria-hidden="true"></span>
     </a>
@@ -88,17 +127,20 @@
   <footer class="footer">
     <img class="footer__mark" src="/assets/mark-white.svg" alt="" width="58" height="20">
     <nav class="footer__links" aria-label="Footer">
-      <a class="caption" href="/reels/">Reels</a>
       <a class="caption" href="/work/">Work</a>
-      <a class="caption" href="/#contact">Contact</a>
+      <a class="caption" href="/reels/">Reels</a>
+      <a class="caption" href="/pricing/">Pricing</a>
+      <a class="caption" href="/guides/">Guides</a>
+      <a class="caption" href="/about/">About</a>
+      <a class="caption" href="/contact/">Contact</a>
     </nav>
-    <span class="caption">An East Marketing brand</span>
+    <span class="caption">Last updated: <time datetime="2026-11-01">1 November 2026</time></span>
     <span class="caption">© <span data-year>2026</span></span>
     <a class="caption footer__top" href="/" data-up>Back up</a>
   </footer>
 
   <div class="cursor" data-cursor aria-hidden="true"><span data-cursor-label></span></div>
 
-  <script src="/main.js?v=6" defer></script>
+  <script src="/main.js?v=8" defer></script>
 </body>
 </html>

@@ -294,7 +294,7 @@ def gif_field():
 
 
 # =====================================================================
-# 3. WAVES — Akdeniz (the Mediterranean) as a swell of bands; seamless loop.
+# 3. WAVES — the Mediterranean as a swell of bands; seamless loop.
 # =====================================================================
 def gif_waves():
     T = 3.0
@@ -496,7 +496,7 @@ def gif_geometry():
 PINS = {
     "sting": dict(
         title="Akdeinz Motion — Movement, framed with intent",
-        description="The Akdeinz Motion mark: an A and an M joined into one form, built from bands cut at 60°. Motion design studio, an East Marketing brand.",
+        description="The Akdeinz Motion mark: an A and an M joined into one form, built from bands cut at 60°. Motion design studio.",
         alt="White Akdeinz Motion logo animating in on a black background, with the tagline Movement, framed with intent, and a blue band.",
     ),
     "field": dict(
@@ -506,7 +506,7 @@ PINS = {
     ),
     "waves": dict(
         title="Sharp coastlines, waves, sun on water — Akdeinz Motion",
-        description="Akdeniz is the Mediterranean, kept abstract and geometric. A study in 60° bands by Akdeinz Motion.",
+        description="The Mediterranean, kept abstract and geometric. A study in 60° bands by Akdeinz Motion.",
         alt="Rows of white and blue slanted bands rising and falling like waves on a black background.",
     ),
     "axis": dict(
@@ -526,7 +526,7 @@ PINS = {
     ),
     "climb": dict(
         title="Rises on 60° and climbs — Akdeinz Motion",
-        description="A sister brand to East Marketing, same family, different direction: Akdeinz Motion rises on 60° and climbs.",
+        description="Akdeinz Motion rises on 60° and climbs.",
         alt="Slanted white bars stacking upward like a staircase, the top one blue, above the words Rises on 60° and climbs.",
     ),
     "geometry": dict(

@@ -10,17 +10,53 @@
   <meta property="og:site_name" content="Akdeinz Motion">
   <meta property="og:title" content="Work — Akdeinz Motion">
   <meta property="og:description" content="Selected motion design work by Akdeinz Motion.">
-  <meta property="og:image" content="https://akdeinzmotion.com/assets/og.png">
+  <meta property="og:image" content="https://akdeinzmotion.com/assets/og/work.jpg">
   <meta property="og:url" content="https://akdeinzmotion.com/work/">
   <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Work — Akdeinz Motion">
+  <meta name="twitter:description" content="Selected motion design work by Akdeinz Motion.">
+  <meta name="twitter:image" content="https://akdeinzmotion.com/assets/og/work.jpg">
   <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/assets/og.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css?v=6">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..800&display=swap" rel="stylesheet"></noscript>
+  <link rel="stylesheet" href="/styles.css?v=8">
   <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"CollectionPage","name":"Work — Akdeinz Motion","description":"Selected motion design work by Akdeinz Motion.","url":"https://akdeinzmotion.com/work/","isPartOf":{"@id":"https://akdeinzmotion.com/#site"},"inLanguage":"en"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://akdeinzmotion.com/"},{"@type":"ListItem","position":2,"name":"Work","item":"https://akdeinzmotion.com/work/"}]}]}</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GMWG4FCK5F"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+    gtag('js', new Date());
+    gtag('config', 'G-GMWG4FCK5F');
+  </script>
+  <script>
+    /* EU consent banner: analytics stays off until a visitor presses Accept; the choice is remembered in this browser */
+    (function () {
+      var KEY = 'am-consent', saved = null;
+      try { saved = localStorage.getItem(KEY); } catch (e) {}
+      function grant() { gtag('consent', 'update', { analytics_storage: 'granted' }); }
+      if (saved === 'granted') { grant(); return; }
+      if (saved === 'denied') return;
+      document.addEventListener('DOMContentLoaded', function () {
+        var bar = document.createElement('div');
+        bar.setAttribute('role', 'region'); bar.setAttribute('aria-label', 'Cookie consent');
+        bar.style.cssText = 'position:fixed;left:16px;right:16px;bottom:16px;z-index:99;max-width:560px;background:#191919;color:#fff;border:1px solid #333;padding:16px;font:14px/1.5 Inter,system-ui,sans-serif';
+        bar.innerHTML = '<p style="margin:0 0 12px">We use Google Analytics to count visits. It only runs if you accept. No ads, no tracking across sites.</p>' +
+          '<button type="button" data-a style="background:#fff;color:#000;border:0;padding:10px 16px;font:inherit;font-weight:600;cursor:pointer">Accept</button> ' +
+          '<button type="button" data-d style="background:transparent;color:#fff;border:1px solid #666;padding:10px 16px;font:inherit;cursor:pointer">Decline</button>';
+        function done(v) { try { localStorage.setItem(KEY, v); } catch (e) {} if (v === 'granted') grant(); bar.remove(); }
+        bar.querySelector('[data-a]').onclick = function () { done('granted'); };
+        bar.querySelector('[data-d]').onclick = function () { done('denied'); };
+        document.body.appendChild(bar);
+      });
+    })();
+  </script>
 </head>
 <body>
 
@@ -31,9 +67,11 @@
       <img src="/assets/logo-horizontal-white.svg" alt="Akdeinz Motion" width="176" height="25">
     </a>
     <nav class="nav__links" aria-label="Primary">
-      <a href="/reels/">Reels</a>
       <a href="/work/" aria-current="page">Work</a>
-      <a href="/#contact" class="nav__cta"><span class="dot" aria-hidden="true"></span>Contact</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/guides/">Guides</a>
+      <a href="/about/">About</a>
+      <a href="/contact/" class="nav__cta"><span class="dot" aria-hidden="true"></span>Contact</a>
     </nav>
   </header>
 
@@ -42,7 +80,7 @@
       <canvas class="hero__field" data-field aria-hidden="true"></canvas>
       <div class="page-head__foot">
         <span class="caption">Selected work</span>
-        <span class="caption">(06)</span>
+        <span class="caption">(16)</span>
       </div>
       <h1 class="page-head__title" data-split>Work</h1>
       <div class="hero__band" aria-hidden="true"></div>
@@ -50,49 +88,137 @@
 
     <section class="work work--list" aria-label="Projects">
       <div class="grid">
-        <article class="tile tile--a" data-tile data-video="">
-          <a class="tile__link" href="/work/rise-study/" data-cursor-text="View">
-            <div class="tile__media"><canvas class="study" data-study="rise" aria-hidden="true"></canvas></div>
-            <div class="tile__meta"><span class="tile__n">01</span><h2>Rise study</h2><span class="tile__type">Motion study</span></div>
+        <article class="tile tile--a" data-tile data-video="/assets/work/logo.mp4">
+          <a class="tile__link" href="/work/logo-animation/" data-cursor-text="View">
+            <div class="tile__media"><img src="/assets/work/logo.jpg" alt="White Akdeinz Motion logo on black above the line Your logo, in motion, with three small previews labelled build, fold and slide." width="600" height="900" loading="lazy" decoding="async"></div>
+            <div class="tile__meta"><span class="tile__n">01</span><h2>Logo animation: your logo, in motion</h2><span class="tile__type">Spec piece: logo animation</span></div>
           </a>
         </article>
-        <article class="tile tile--b" data-tile data-video="">
-          <a class="tile__link" href="/work/shutter-study/" data-cursor-text="View">
-            <div class="tile__media"><canvas class="study" data-study="shutter" aria-hidden="true"></canvas></div>
-            <div class="tile__meta"><span class="tile__n">02</span><h2>Shutter study</h2><span class="tile__type">Motion study</span></div>
+        <article class="tile tile--b" data-tile data-video="/assets/work/kinetic-type.mp4">
+          <a class="tile__link" href="/work/kinetic-type/" data-cursor-text="View">
+            <div class="tile__media"><img src="/assets/work/kinetic-type.jpg" alt="The words Words that move people in large black and blue type on an off-white background, with weight and width values below." width="600" height="900" loading="lazy" decoding="async"></div>
+            <div class="tile__meta"><span class="tile__n">02</span><h2>Kinetic type: words that move people</h2><span class="tile__type">Spec piece: kinetic type</span></div>
           </a>
         </article>
-        <article class="tile tile--c" data-tile data-video="">
-          <a class="tile__link" href="/work/wave-study/" data-cursor-text="View">
-            <div class="tile__media"><canvas class="study" data-study="wave" aria-hidden="true"></canvas></div>
-            <div class="tile__meta"><span class="tile__n">03</span><h2>Wave study</h2><span class="tile__type">Motion study</span></div>
+        <article class="tile tile--c" data-tile data-video="/assets/work/product-ui.mp4">
+          <a class="tile__link" href="/work/product-ui/" data-cursor-text="View">
+            <div class="tile__media"><img src="/assets/work/product-ui.jpg" alt="A browser window with a dashboard, a line chart and a blue Generate button under the headline Explain your product in one scroll." width="600" height="900" loading="lazy" decoding="async"></div>
+            <div class="tile__meta"><span class="tile__n">03</span><h2>Product and UI animation: one scroll</h2><span class="tile__type">Spec piece: product and UI animation</span></div>
           </a>
         </article>
-        <article class="tile tile--d" data-tile data-video="">
-          <a class="tile__link" href="/work/fold-study/" data-cursor-text="View">
-            <div class="tile__media"><canvas class="study" data-study="fold" aria-hidden="true"></canvas></div>
-            <div class="tile__meta"><span class="tile__n">04</span><h2>Fold study</h2><span class="tile__type">Motion study</span></div>
+        <article class="tile tile--d" data-tile data-video="/assets/work/scroll-stopper.mp4">
+          <a class="tile__link" href="/work/scroll-stopper/" data-cursor-text="View">
+            <div class="tile__media"><img src="/assets/work/scroll-stopper.jpg" alt="A grey feed of placeholder cards split by a diagonal, with a black card reading Now in motion and the line Motion gets watched." width="600" height="900" loading="lazy" decoding="async"></div>
+            <div class="tile__meta"><span class="tile__n">04</span><h2>Social scroll-stopper ad</h2><span class="tile__type">Spec piece: social ad</span></div>
+          </a>
+        </article>
+        <article class="tile tile--e" data-tile data-video="/assets/work/3d.mp4">
+          <a class="tile__link" href="/work/3d-depth/" data-cursor-text="View">
+            <div class="tile__media"><img src="/assets/work/3d.jpg" alt="A white three-dimensional AM mark on a blue field with floating cubes and the line Depth that sells." width="600" height="900" loading="lazy" decoding="async"></div>
+            <div class="tile__meta"><span class="tile__n">05</span><h2>3D motion: depth that sells</h2><span class="tile__type">Spec piece: 3D motion</span></div>
+          </a>
+        </article>
+        <article class="tile tile--f" data-tile data-video="/assets/work/data.mp4">
+          <a class="tile__link" href="/work/data-motion/" data-cursor-text="View">
+            <div class="tile__media"><img src="/assets/work/data.jpg" alt="A bar chart with a blue average line, a ring showing 63% and a total of 11,871 units on a cream background." width="600" height="900" loading="lazy" decoding="async"></div>
+            <div class="tile__meta"><span class="tile__n">06</span><h2>Data motion: numbers people actually watch</h2><span class="tile__type">Spec piece: data motion</span></div>
+          </a>
+        </article>
+        <article class="tile tile--a" data-tile data-video="/assets/work/process.mp4">
+          <a class="tile__link" href="/work/process-explainer/" data-cursor-text="View">
+            <div class="tile__media"><img src="/assets/work/process.jpg" alt="A dark timeline with the steps brief, board, motion and deliver under the headline How a film gets made." width="600" height="900" loading="lazy" decoding="async"></div>
+            <div class="tile__meta"><span class="tile__n">07</span><h2>Process explainer: how a film gets made</h2><span class="tile__type">Spec piece: process explainer</span></div>
+          </a>
+        </article>
+        <article class="tile tile--b" data-tile data-video="/assets/work/formats.mp4">
+          <a class="tile__link" href="/work/formats/" data-cursor-text="View">
+            <div class="tile__media"><img src="/assets/work/formats.jpg" alt="A phone-shaped frame with the Akdeinz Motion mark and four format labels under the headline One idea. Every screen." width="600" height="900" loading="lazy" decoding="async"></div>
+            <div class="tile__meta"><span class="tile__n">08</span><h2>Every format: one idea on every screen</h2><span class="tile__type">Spec piece: aspect ratios</span></div>
+          </a>
+        </article>
+        <article class="tile tile--c" data-tile data-video="/assets/work/generative.mp4">
+          <a class="tile__link" href="/work/generative/" data-cursor-text="View">
+            <div class="tile__media"><img src="/assets/work/generative.jpg" alt="A grey particle-textured AM mark on black with a blue glow under the headline Made, not templated." width="600" height="900" loading="lazy" decoding="async"></div>
+            <div class="tile__meta"><span class="tile__n">09</span><h2>Generative motion: made, not templated</h2><span class="tile__type">Spec piece: generative motion</span></div>
+          </a>
+        </article>
+        <article class="tile tile--d" data-tile data-video="/assets/work/contact.mp4">
+          <a class="tile__link" href="/work/say-hello/" data-cursor-text="View">
+            <div class="tile__media"><img src="/assets/work/contact.jpg" alt="A dark chat window from Akdeinz Motion showing messages about a launch and a storyboard file under the headline Your next launch starts with a DM." width="600" height="900" loading="lazy" decoding="async"></div>
+            <div class="tile__meta"><span class="tile__n">10</span><h2>Social UI animation: a DM and a storyboard</h2><span class="tile__type">Spec piece: social UI animation</span></div>
           </a>
         </article>
         <article class="tile tile--e" data-tile data-video="">
-          <a class="tile__link" href="/work/stack-study/" data-cursor-text="View">
-            <div class="tile__media"><canvas class="study" data-study="stack" aria-hidden="true"></canvas></div>
-            <div class="tile__meta"><span class="tile__n">05</span><h2>Stack study</h2><span class="tile__type">Motion study</span></div>
+          <a class="tile__link" href="/work/rise-study/" data-cursor-text="View">
+            <div class="tile__media"><canvas class="study" data-study="rise" aria-hidden="true"></canvas></div>
+            <div class="tile__meta"><span class="tile__n">11</span><h2>Rise study</h2><span class="tile__type">Motion study</span></div>
           </a>
         </article>
         <article class="tile tile--f" data-tile data-video="">
-          <a class="tile__link" href="/work/tunnel-study/" data-cursor-text="View">
-            <div class="tile__media"><canvas class="study" data-study="tunnel" aria-hidden="true"></canvas></div>
-            <div class="tile__meta"><span class="tile__n">06</span><h2>Tunnel study</h2><span class="tile__type">Motion study</span></div>
+          <a class="tile__link" href="/work/shutter-study/" data-cursor-text="View">
+            <div class="tile__media"><canvas class="study" data-study="shutter" aria-hidden="true"></canvas></div>
+            <div class="tile__meta"><span class="tile__n">12</span><h2>Shutter study</h2><span class="tile__type">Motion study</span></div>
           </a>
         </article>
+        <article class="tile tile--a" data-tile data-video="">
+          <a class="tile__link" href="/work/wave-study/" data-cursor-text="View">
+            <div class="tile__media"><canvas class="study" data-study="wave" aria-hidden="true"></canvas></div>
+            <div class="tile__meta"><span class="tile__n">13</span><h2>Wave study</h2><span class="tile__type">Motion study</span></div>
+          </a>
+        </article>
+        <article class="tile tile--b" data-tile data-video="">
+          <a class="tile__link" href="/work/fold-study/" data-cursor-text="View">
+            <div class="tile__media"><canvas class="study" data-study="fold" aria-hidden="true"></canvas></div>
+            <div class="tile__meta"><span class="tile__n">14</span><h2>Fold study</h2><span class="tile__type">Motion study</span></div>
+          </a>
+        </article>
+        <article class="tile tile--c" data-tile data-video="">
+          <a class="tile__link" href="/work/stack-study/" data-cursor-text="View">
+            <div class="tile__media"><canvas class="study" data-study="stack" aria-hidden="true"></canvas></div>
+            <div class="tile__meta"><span class="tile__n">15</span><h2>Stack study</h2><span class="tile__type">Motion study</span></div>
+          </a>
+        </article>
+        <article class="tile tile--d" data-tile data-video="">
+          <a class="tile__link" href="/work/tunnel-study/" data-cursor-text="View">
+            <div class="tile__media"><canvas class="study" data-study="tunnel" aria-hidden="true"></canvas></div>
+            <div class="tile__meta"><span class="tile__n">16</span><h2>Tunnel study</h2><span class="tile__type">Motion study</span></div>
+          </a>
+        </article>
+      </div>
+    </section>
+
+    <section class="pieces" aria-labelledby="pieces-title">
+      <h2 id="pieces-title" class="caption">All pieces</h2>
+      <p>Self-initiated studies and spec pieces made in the Akdeinz Motion identity. No client names are used.</p>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="All pieces">
+        <table>
+          <thead><tr><th scope="col">Title</th><th scope="col">Type</th><th scope="col">Length</th><th scope="col">Brief</th></tr></thead>
+          <tbody>
+          <tr><th scope="row"><a href="/work/logo-animation/">Logo animation: your logo, in motion</a></th><td>Spec piece: logo animation</td><td>9 s</td><td>The Akdeinz Motion mark shown in three motion styles: build, fold and slide.</td></tr>
+          <tr><th scope="row"><a href="/work/kinetic-type/">Kinetic type: words that move people</a></th><td>Spec piece: kinetic type</td><td>9 s</td><td>A headline set in type that changes weight and width.</td></tr>
+          <tr><th scope="row"><a href="/work/product-ui/">Product and UI animation: one scroll</a></th><td>Spec piece: product and UI animation</td><td>9 s</td><td>An illustrative app screen walked through in one scroll.</td></tr>
+          <tr><th scope="row"><a href="/work/scroll-stopper/">Social scroll-stopper ad</a></th><td>Spec piece: social ad</td><td>9 s</td><td>A feed of grey placeholder cards is cut by a diagonal, and one card moves.</td></tr>
+          <tr><th scope="row"><a href="/work/3d-depth/">3D motion: depth that sells</a></th><td>Spec piece: 3D motion</td><td>9 s</td><td>The mark in 3D on a blue field, with small floating cubes.</td></tr>
+          <tr><th scope="row"><a href="/work/data-motion/">Data motion: numbers people actually watch</a></th><td>Spec piece: data motion</td><td>9 s</td><td>A monthly bar chart with an average line and three key figures.</td></tr>
+          <tr><th scope="row"><a href="/work/process-explainer/">Process explainer: how a film gets made</a></th><td>Spec piece: process explainer</td><td>9 s</td><td>A timeline from brief to delivery, drawn like a film editor.</td></tr>
+          <tr><th scope="row"><a href="/work/formats/">Every format: one idea on every screen</a></th><td>Spec piece: aspect ratios</td><td>9 s</td><td>One layout shown in 16:9, 1:1, 4:5 and 9:16.</td></tr>
+          <tr><th scope="row"><a href="/work/generative/">Generative motion: made, not templated</a></th><td>Spec piece: generative motion</td><td>9 s</td><td>The mark made of about 1,400 particles on a blue glow.</td></tr>
+          <tr><th scope="row"><a href="/work/say-hello/">Social UI animation: a DM and a storyboard</a></th><td>Spec piece: social UI animation</td><td>9 s</td><td>A short chat that ends with a storyboard file, drawn as a phone interface.</td></tr>
+          <tr><th scope="row"><a href="/work/rise-study/">Rise study</a></th><td>Motion study</td><td>Looping study</td><td>The logo sting. Bands slide in on their own axis, the fold fades up, then everything exits.</td></tr>
+          <tr><th scope="row"><a href="/work/shutter-study/">Shutter study</a></th><td>Motion study</td><td>Looping study</td><td>Thin 60° slats breathing in width, like a shutter.</td></tr>
+          <tr><th scope="row"><a href="/work/wave-study/">Wave study</a></th><td>Motion study</td><td>Looping study</td><td>Rows of bands whose height follows a Mediterranean swell.</td></tr>
+          <tr><th scope="row"><a href="/work/fold-study/">Fold study</a></th><td>Motion study</td><td>Looping study</td><td>A ribbon pulled through a frame. Past the edge it bends into the fold.</td></tr>
+          <tr><th scope="row"><a href="/work/stack-study/">Stack study</a></th><td>Motion study</td><td>Looping study</td><td>Bars stack upward, then clear. The mark climbs.</td></tr>
+          <tr><th scope="row"><a href="/work/tunnel-study/">Tunnel study</a></th><td>Motion study</td><td>Looping study</td><td>Nested bands receding into the frame.</td></tr>
+          </tbody>
+        </table>
       </div>
     </section>
   </main>
 
   <section class="contact contact--cta" aria-labelledby="cta-title">
     <h2 id="cta-title" class="contact__title" data-split>Let’s make it move.</h2>
-    <a class="send" href="/#contact">
+    <a class="send" href="/contact/">
       <span class="send__label">Contact</span>
       <span class="send__band" aria-hidden="true"></span>
     </a>
@@ -101,17 +227,20 @@
   <footer class="footer">
     <img class="footer__mark" src="/assets/mark-white.svg" alt="" width="58" height="20">
     <nav class="footer__links" aria-label="Footer">
-      <a class="caption" href="/reels/">Reels</a>
       <a class="caption" href="/work/">Work</a>
-      <a class="caption" href="/#contact">Contact</a>
+      <a class="caption" href="/reels/">Reels</a>
+      <a class="caption" href="/pricing/">Pricing</a>
+      <a class="caption" href="/guides/">Guides</a>
+      <a class="caption" href="/about/">About</a>
+      <a class="caption" href="/contact/">Contact</a>
     </nav>
-    <span class="caption">An East Marketing brand</span>
+    <span class="caption">Last updated: <time datetime="2026-11-01">1 November 2026</time></span>
     <span class="caption">© <span data-year>2026</span></span>
     <a class="caption footer__top" href="/" data-up>Back up</a>
   </footer>
 
   <div class="cursor" data-cursor aria-hidden="true"><span data-cursor-label></span></div>
 
-  <script src="/main.js?v=6" defer></script>
+  <script src="/main.js?v=8" defer></script>
 </body>
 </html>
